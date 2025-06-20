@@ -1,0 +1,111 @@
+:root{
+    --darkGreen: #171c15;
+    --lightGreen: #314338;
+
+    --lightBeige: #faf5e4;
+    --regBeige: #d3b99f;
+    
+    --lightBrown: #a67c52;
+    --regBrown: #4b2e2d;
+    --darkBrown: #2d1e1e;
+}
+
+$poppins: "Poppins", sans-serif;
+$libre: "Libre Baskerville", serif;
+$playfair: "Playfair Display", serif;
+
+html{
+    scroll-behavior: smooth;
+    font-family: $poppins;
+}
+
+body{
+    background-color: var(--lightBeige);
+    height: auto;
+    width: 100vw;
+    display: flex;
+}
+
+nav{
+    width: 300px;
+    height: 100vh;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    padding: 20px 25px 20px 20px;
+
+    .card{
+        background-color: blue;
+        min-height: 125px;
+        height: auto;
+        width: 100%;
+        display: flex;
+        color: var(--lightBeige);
+        padding: 10px;
+        justify-content: space-between;
+        gap: 10px;
+        border-radius: 10px;
+        box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+        cursor: pointer;
+        transition: all 0.3s ease;
+
+        &:hover{
+            color: var(--darkBrown);
+            background: transparent !important;
+            border: 1px solid var(--darkBrown);
+
+            .card__index {
+                border-right: 1px solid var(--darkBrown); 
+            }
+
+            svg{
+                fill: var(--darkBrown);
+            }
+        }
+
+        .card__index{
+            padding-right: 10px;
+            border-right: 1px solid var(--lightBeige);
+        }
+
+        .card__content{
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
+            width: 75%;
+
+            .card__title{
+                font-size: 1.2rem;
+                line-height: 1.2;
+                font-weight: 500;
+            }
+
+            .card__list{
+                display: block;
+                height: 0;
+                opacity: 0;
+            }
+        }
+    }
+
+    #card-mug-adventures{
+        background: linear-gradient(45deg, hsla(30, 34%, 49%, 1) 0%, hsla(30, 82%, 66%, 1) 100%);
+    }
+
+    #card-profil{
+        background: linear-gradient(45deg, hsla(2, 25%, 24%, 1) 0%, hsla(2, 34%, 42%, 1) 100%);
+    }
+
+    #card-beginners-corner{
+        background: linear-gradient(45deg, hsla(103, 14%, 10%, 1) 0%, hsla(103, 19%, 29%, 1) 100%);
+    }
+
+    #card-erfahrene-geniesser{
+        background: linear-gradient(45deg, hsla(143, 16%, 23%, 1) 0%, hsla(143, 23%, 39%, 1) 100%);
+    }
+
+    #card-support{
+        
+    }
+}
