@@ -3,16 +3,24 @@
     --lightGreen: #314338;
 
     --lightBeige: #faf5e4;
-    --regBeige: #d3b99f;
+    --regBeige: hsla(30, 82%, 66%, 1);
     
-    --lightBrown: #a67c52;
+    --lightBrown: #dfb5b3;
     --regBrown: #4b2e2d;
     --darkBrown: #2d1e1e;
+
+
+    //text color for sections
+
+    --HMtext: #090606;
+    --BCtext: #F6EAE9;
 }
 
 $poppins: "Poppins", sans-serif;
 $libre: "Libre Baskerville", serif;
 $playfair: "Playfair Display", serif;
+
+$mb: 20px;
 
 html{
     scroll-behavior: smooth;
@@ -23,6 +31,9 @@ body{
     background-color: var(--lightBeige);
     height: auto;
     width: 100vw;
+}
+
+main{
     display: flex;
 }
 
@@ -34,6 +45,7 @@ nav{
     flex-direction: column;
     gap: 20px;
     padding: 20px 25px 20px 20px;
+    position: fixed;
 
     .card{
         background-color: blue;
@@ -89,23 +101,107 @@ nav{
         }
     }
 
-    #card-mug-adventures{
+    #card-home{
         background: linear-gradient(45deg, hsla(30, 34%, 49%, 1) 0%, hsla(30, 82%, 66%, 1) 100%);
     }
 
-    #card-profil{
+    #card-beginners-corner{
         background: linear-gradient(45deg, hsla(2, 25%, 24%, 1) 0%, hsla(2, 34%, 42%, 1) 100%);
     }
 
-    #card-beginners-corner{
+    #card-erfahrene-geniesser{
         background: linear-gradient(45deg, hsla(103, 14%, 10%, 1) 0%, hsla(103, 19%, 29%, 1) 100%);
     }
 
-    #card-erfahrene-geniesser{
+    #card-welt-des-kaffees{
         background: linear-gradient(45deg, hsla(143, 16%, 23%, 1) 0%, hsla(143, 23%, 39%, 1) 100%);
     }
 
     #card-support{
         
     }
+}
+
+/* ---------------------------------- content ----------------------------------*/
+
+.main__wrapper{
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    margin: 20px 20px 20px 320px;
+}
+
+.big__tile{
+    height: auto;
+    border-radius: 10px;
+    opacity: 0;
+    transform: translateY(50px);
+    transition: all 0.3s ease;
+    margin-bottom: $mb;
+
+    &.show{
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.small__tile{
+    height: 30px;
+    width: 100%;
+    border-radius: 50px;
+    margin-bottom: $mb;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    font-weight: 700;
+}
+
+#section-home{
+    color: var(--HMtext);
+    .mug__adventure{
+        border: 1px solid var(--darkBrown);
+        padding: 150px 20px 20px 20px;
+    
+        h1{
+            font-size: 8rem;
+            line-height: 1;
+        }
+    }
+
+    .divider__MA{
+        background-color: var(--regBeige);
+        font-size: 1.2rem;
+    }
+
+    .home{
+        background-color: var(--regBeige);
+        padding: 20px 20px 300px 20px;
+
+        h3{
+            font-size: 6rem;
+            line-height: 1;
+        }
+    }
+}
+
+#section-beginners-corner{
+    color: var(--BCtext);
+    .dividers{
+        display: flex;
+        gap: 20px;
+
+        .divider__BC1{
+            background-color: var(--regBrown);
+            width: 25%;
+        }
+
+        .divider__BC2{
+            background-color: var(--regBrown);
+            width: 75%;
+        }
+
+    }
+    
 }
