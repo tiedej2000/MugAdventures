@@ -36,7 +36,7 @@ nav {
   position: fixed;
 }
 nav .card {
-  background-color: blue;
+  background: linear-gradient(45deg, rgb(25, 0, 255) 0%, rgb(25, 0, 255) 100%);
   min-height: 125px;
   height: auto;
   width: 100%;
@@ -63,7 +63,7 @@ nav .card:hover svg {
 }
 nav .card:hover .card__content .card__list {
   opacity: 1;
-  height: auto;
+  max-height: 50px;
 }
 nav .card .card__index {
   padding-right: 10px;
@@ -82,8 +82,14 @@ nav .card .card__content .card__title {
 }
 nav .card .card__content .card__list {
   display: block;
-  max-height: 0px;
+  max-height: 0;
   opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s linear;
+}
+nav .card .card__content .card__list li {
+  font-size: 0.8rem;
+  line-height: 1.2;
 }
 nav #card-home {
   background: linear-gradient(45deg, hsl(30, 34%, 49%) 0%, hsl(30, 82%, 66%) 100%);
