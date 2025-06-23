@@ -61,6 +61,10 @@ nav .card:hover .card__index {
 nav .card:hover svg {
   fill: var(--darkBrown);
 }
+nav .card:hover .card__content .card__list {
+  opacity: 1;
+  height: auto;
+}
 nav .card .card__index {
   padding-right: 10px;
   border-right: 1px solid var(--lightBeige);
@@ -78,7 +82,7 @@ nav .card .card__content .card__title {
 }
 nav .card .card__content .card__list {
   display: block;
-  height: 0;
+  max-height: 0px;
   opacity: 0;
 }
 nav #card-home {
@@ -109,6 +113,7 @@ nav #card-welt-des-kaffees {
   transform: translateY(50px);
   transition: all 0.3s ease;
   margin-bottom: 20px;
+  padding: 20px;
 }
 .big__tile.show {
   opacity: 1;
@@ -124,6 +129,12 @@ nav #card-welt-des-kaffees {
   justify-content: space-between;
   align-items: center;
   padding: 0px 20px;
+  font-weight: 700;
+}
+
+.tile__heading {
+  font-size: 5rem;
+  line-height: 1;
   font-weight: 700;
 }
 
@@ -146,10 +157,6 @@ nav #card-welt-des-kaffees {
   background-color: var(--regBeige);
   padding: 20px 20px 300px 20px;
 }
-#section-home .home h3 {
-  font-size: 6rem;
-  line-height: 1;
-}
 
 #section-beginners-corner {
   color: var(--BCtext);
@@ -165,4 +172,58 @@ nav #card-welt-des-kaffees {
 #section-beginners-corner .dividers .divider__BC2 {
   background-color: var(--regBrown);
   width: 75%;
+}
+#section-beginners-corner .beginners__corner {
+  background-color: var(--regBrown);
+  display: flex;
+}
+#section-beginners-corner .beginners__corner .bc__left {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+#section-beginners-corner .beginners__corner .info__card {
+  display: flex;
+  gap: 20px;
+  border-radius: 10px;
+  background-color: var(--lightBeige);
+  color: var(--regBrown);
+}
+#section-beginners-corner .beginners__corner .info__card img {
+  width: 175px;
+  height: 175px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+#section-beginners-corner .beginners__corner .info__card ul {
+  padding: 10px 10px 10px 0px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+#section-beginners-corner .beginners__corner .info__card ul li:first-child {
+  font-weight: 700;
+  font-size: 1.2rem;
+}
+#section-beginners-corner .beginners__corner .text__block {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  padding-left: 30px;
+  border-left: 1px solid var(--lightBeige);
+  margin: 20px 0;
+}
+#section-beginners-corner .beginners__corner .highlight__card {
+  list-style-type: disc;
+  background-color: var(--lightBeige);
+  padding: 20px;
+  display: grid;
+  place-content: center;
+  color: var(--darkBrown);
+  margin: 0px 30px;
+  box-shadow: 5px 5px 0px var(--darkBrown);
+}
+#section-beginners-corner .beginners__corner .bc__right {
+  width: 50%;
+  display: flex;
 }/*# sourceMappingURL=styles.css.map */

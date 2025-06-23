@@ -74,6 +74,11 @@ nav{
             svg{
                 fill: var(--darkBrown);
             }
+
+            .card__content .card__list{
+                opacity: 1;
+                height: auto;
+            }
         }
 
         .card__index{
@@ -95,7 +100,7 @@ nav{
 
             .card__list{
                 display: block;
-                height: 0;
+                max-height: 0px;
                 opacity: 0;
             }
         }
@@ -139,6 +144,7 @@ nav{
     transform: translateY(50px);
     transition: all 0.3s ease;
     margin-bottom: $mb;
+    padding: 20px;
 
     &.show{
         opacity: 1;
@@ -155,6 +161,12 @@ nav{
     justify-content: space-between;
     align-items: center;
     padding: 0px 20px;
+    font-weight: 700;
+}
+
+.tile__heading{
+    font-size: 5rem;
+    line-height: 1;
     font-weight: 700;
 }
 
@@ -178,16 +190,12 @@ nav{
     .home{
         background-color: var(--regBeige);
         padding: 20px 20px 300px 20px;
-
-        h3{
-            font-size: 6rem;
-            line-height: 1;
-        }
     }
 }
 
 #section-beginners-corner{
     color: var(--BCtext);
+
     .dividers{
         display: flex;
         gap: 20px;
@@ -202,6 +210,70 @@ nav{
             width: 75%;
         }
 
+    }
+
+    .beginners__corner{
+        background-color: var(--regBrown);
+        display: flex;
+
+        .bc__left{
+            width: 50%;
+            display: flex;
+            flex-direction: column;
+            gap: 20px;
+        }
+
+        .info__card{
+            display: flex;
+            gap: 20px;
+            border-radius: 10px;
+            background-color: var(--lightBeige);
+            color: var(--regBrown);
+
+            img{
+                width: 175px;
+                height: 175px;
+                border-top-left-radius: 10px; border-bottom-left-radius: 10px;
+            }
+
+            ul{
+                padding: 10px 10px 10px 0px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+
+                li{
+                    &:first-child{
+                        font-weight: 700;
+                        font-size: 1.2rem;
+                    }
+                }
+            }
+        }
+
+        .text__block{
+            font-size: 0.9rem;
+            line-height: 1.6;
+            padding-left: 30px;
+            border-left: 1px solid var(--lightBeige);
+            margin: 20px 0;
+        }
+
+        .highlight__card{
+            list-style-type: disc;
+            background-color: var(--lightBeige);
+            padding: 20px;
+            display: grid;
+            place-content: center;
+            color: var(--darkBrown);
+            margin: 0px 30px;
+            box-shadow: 5px 5px 0px var(--darkBrown);
+        }
+
+        .bc__right{
+            width: 50%;
+            display: flex;
+        }
     }
     
 }
