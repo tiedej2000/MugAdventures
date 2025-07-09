@@ -6,6 +6,7 @@
   --lightBrown: #dfb5b3;
   --regBrown: #4b2e2d;
   --darkBrown: #2d1e1e;
+  --black: black;
   --HMtext: #090606;
   --BCtext: #F6EAE9;
 }
@@ -183,56 +184,6 @@ nav #card-welt-des-kaffees {
   background-color: var(--regBrown);
   display: flex;
 }
-#section-beginners-corner .beginners__corner .bc__left {
-  width: 50%;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
-}
-#section-beginners-corner .beginners__corner .info__card {
-  display: flex;
-  gap: 20px;
-  border-radius: 10px;
-  background-color: var(--lightBeige);
-  color: var(--regBrown);
-}
-#section-beginners-corner .beginners__corner .info__card img {
-  width: 175px;
-  height: 175px;
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
-}
-#section-beginners-corner .beginners__corner .info__card ul {
-  padding: 10px 10px 10px 0px;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-}
-#section-beginners-corner .beginners__corner .info__card ul li:first-child {
-  font-weight: 700;
-  font-size: 1.2rem;
-}
-#section-beginners-corner .beginners__corner .text__block {
-  font-size: 0.9rem;
-  line-height: 1.6;
-  padding-left: 30px;
-  border-left: 1px solid var(--lightBeige);
-  margin: 20px 0;
-}
-#section-beginners-corner .beginners__corner .highlight__card {
-  list-style-type: disc;
-  background-color: var(--lightBeige);
-  padding: 20px;
-  display: grid;
-  place-content: center;
-  color: var(--darkBrown);
-  margin: 0px 30px;
-  box-shadow: 5px 5px 0px var(--darkBrown);
-}
-#section-beginners-corner .beginners__corner .bc__right {
-  width: 50%;
-  display: flex;
-}
 
 #section-shop {
   color: var(--darkBrown);
@@ -289,18 +240,187 @@ nav #card-welt-des-kaffees {
   padding: 10px 20px;
   border-radius: 50px;
   cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+}
+#section-shop .empfehlungen .empfehlungen__content .buy__btn svg {
+  fill: var(--lightBeige);
+}
+#section-shop .empfehlungen .empfehlungen__content .buy__btn:hover {
+  background-color: var(--lightBeige);
+  border: 1px solid var(--darkBrown);
+}
+#section-shop .empfehlungen .empfehlungen__content .buy__btn:hover svg {
+  fill: var(--darkBrown);
 }
 #section-shop .shop {
   display: flex;
   gap: 20px;
   width: 100vw;
   overflow-x: scroll;
+  overflow-y: hidden;
 }
 #section-shop .shop .shop__card {
   border: 1px solid var(--darkBrown);
   border-radius: 10px;
-  padding: 20px;
-  height: auto;
-  width: 70%;
+  padding: 20px 40px 40px 40px;
+  display: flex;
+  flex-direction: column;
+  height: 85vh;
+  width: 75%;
   flex-shrink: 0;
+  position: relative;
+  background: url("../media/shop/placeholder_coffee_single.png") no-repeat 50% 50%;
+  background-size: 35%;
+}
+#section-shop .shop .shop__card .categories__wrapper {
+  width: 100%;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+#section-shop .shop .shop__card .categories__wrapper .categorie__item {
+  padding: 10px 30px;
+  border-radius: 50px;
+  border: 1px solid var(--darkBrown);
+  color: var(--darkBrown);
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+#section-shop .shop .shop__card .categories__wrapper .active {
+  background-color: var(--black);
+  color: var(--lightBeige);
+}
+#section-shop .shop .shop__card .card__content {
+  display: flex;
+  justify-content: space-between;
+  flex: 1 1 auto;
+}
+#section-shop .shop .shop__card .card__content .coffee__info {
+  display: flex;
+  flex-direction: column;
+  width: 25%;
+  flex: 1 1 auto;
+}
+#section-shop .shop .shop__card .card__content .coffee__info .header {
+  font-weight: 700;
+  font-size: 3rem;
+  line-height: 1;
+}
+#section-shop .shop .shop__card .card__content .coffee__info .ingredients__header {
+  margin-top: auto;
+  border-bottom: 1px solid var(--darkBrown);
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+}
+#section-shop .shop .shop__card .card__content .coffee__info .ingredients {
+  font-size: 0.9rem;
+  margin-bottom: 20px;
+}
+#section-shop .shop .shop__card .card__content .coffee__info .allergies__info {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  font-size: 0.9rem;
+}
+#section-shop .shop .shop__card .card__content .coffee__info .allergies__info svg {
+  fill: var(--darkBrown);
+  width: 20px;
+  height: 20px;
+}
+#section-shop .shop .shop__card .card__content .price {
+  width: 50%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  align-items: center;
+  justify-content: flex-end;
+  font-weight: 700;
+  font-size: 2rem;
+  line-height: 1;
+}
+#section-shop .shop .shop__card .card__content .price .vat {
+  font-size: 0.8rem;
+  font-weight: normal;
+}
+#section-shop .shop .shop__card .card__content .cart {
+  display: flex;
+  width: 25%;
+  flex-direction: column;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-end;
+}
+#section-shop .shop .shop__card .card__content .cart .amount__btns {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  gap: 10px;
+}
+#section-shop .shop .shop__card .card__content .cart .amount__btns .amount__btn {
+  border: 1px solid var(--black);
+  color: var(--black);
+  width: 45px;
+  height: 45px;
+  border-radius: 50px;
+  display: grid;
+  place-content: center;
+  cursor: pointer;
+}
+#section-shop .shop .shop__card .card__content .cart .amount__btns .active {
+  background-color: var(--black);
+  color: var(--lightBeige);
+}
+#section-shop .shop .shop__card .card__content .cart .amount__btns .amount__btn_custom {
+  border: 1px solid var(--black);
+  color: var(--black);
+  border-radius: 50px;
+  padding: 0px 20px;
+  display: flex;
+  align-items: center;
+  width: 150px;
+  height: 45px;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background-color: transparent;
+}
+#section-shop .shop .shop__card .card__content .cart .cart__btn {
+  display: grid;
+  place-content: center;
+  padding: 10px 20px;
+  width: 100%;
+  height: auto;
+  background-color: var(--black);
+  border-radius: 50px;
+  border: 1px solid var(--black);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+#section-shop .shop .shop__card .card__content .cart .cart__btn:hover {
+  background-color: var(--lightBeige);
+}
+#section-shop .shop .shop__card .card__content .cart .cart__btn:hover svg {
+  fill: var(--black);
+}
+#section-shop .shop .shop__card .card__content .cart .cart__btn svg {
+  fill: var(--lightBeige);
+}
+#section-shop .shop .shop__card .next__btn, #section-shop .shop .shop__card .prev__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+#section-shop .shop .shop__card .next__btn svg, #section-shop .shop .shop__card .prev__btn svg {
+  width: 40px;
+  height: 40px;
+}
+#section-shop .shop .shop__card .next__btn {
+  right: 20px;
+}
+#section-shop .shop .shop__card .prev__btn {
+  left: 20px;
 }/*# sourceMappingURL=styles.css.map */

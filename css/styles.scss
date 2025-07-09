@@ -9,6 +9,8 @@
     --regBrown: #4b2e2d;
     --darkBrown: #2d1e1e;
 
+    --black: black;
+
 
     //text color for sections
 
@@ -222,65 +224,6 @@ nav{
     .beginners__corner{
         background-color: var(--regBrown);
         display: flex;
-
-        .bc__left{
-            width: 50%;
-            display: flex;
-            flex-direction: column;
-            gap: 20px;
-        }
-
-        .info__card{
-            display: flex;
-            gap: 20px;
-            border-radius: 10px;
-            background-color: var(--lightBeige);
-            color: var(--regBrown);
-
-            img{
-                width: 175px;
-                height: 175px;
-                border-top-left-radius: 10px; border-bottom-left-radius: 10px;
-            }
-
-            ul{
-                padding: 10px 10px 10px 0px;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-
-                li{
-                    &:first-child{
-                        font-weight: 700;
-                        font-size: 1.2rem;
-                    }
-                }
-            }
-        }
-
-        .text__block{
-            font-size: 0.9rem;
-            line-height: 1.6;
-            padding-left: 30px;
-            border-left: 1px solid var(--lightBeige);
-            margin: 20px 0;
-        }
-
-        .highlight__card{
-            list-style-type: disc;
-            background-color: var(--lightBeige);
-            padding: 20px;
-            display: grid;
-            place-content: center;
-            color: var(--darkBrown);
-            margin: 0px 30px;
-            box-shadow: 5px 5px 0px var(--darkBrown);
-        }
-
-        .bc__right{
-            width: 50%;
-            display: flex;
-        }
     }
     
 }
@@ -311,9 +254,6 @@ nav{
             .item{
                 display: grid;
                 place-content: center;
-                img{
-
-                }
             }
 
             .subheader{
@@ -351,6 +291,21 @@ nav{
                 padding: 10px 20px;
                 border-radius: 50px;
                 cursor: pointer;
+                border: 1px solid transparent;
+                transition: all 0.3s ease;
+
+                svg{
+                    fill: var(--lightBeige);
+                }
+
+                &:hover{
+                    background-color: var(--lightBeige);
+                    border: 1px solid var(--darkBrown);
+
+                    svg{
+                        fill: var(--darkBrown);
+                    }
+                }
             }
         }
     }
@@ -360,14 +315,199 @@ nav{
         gap: 20px;
         width: 100vw;
         overflow-x: scroll;
+        overflow-y: hidden;
+
 
         .shop__card{
             border: 1px solid var(--darkBrown);
             border-radius: 10px;
-            padding: 20px;
-            height: auto;
-            width: 70%;
+            padding: 20px 40px 40px 40px;
+            display: flex;
+            flex-direction: column;
+            height: 85vh;
+            width: 75%;
             flex-shrink: 0;
+            position: relative;
+
+            background: url('../media/shop/placeholder_coffee_single.png') no-repeat 50% 50%;
+            background-size: 35%;
+
+            .categories__wrapper{
+                width: 100%;
+                display: flex;
+                gap: 20px;
+                justify-content: center;
+                margin-bottom: $mb;
+
+                .categorie__item{
+                    padding: 10px 30px;
+                    border-radius: 50px;
+                    border: 1px solid var(--darkBrown);
+                    color: var(--darkBrown);
+                    font-size: 0.9rem;
+                    cursor: pointer;
+                }
+
+                .active{
+                    background-color: var(--black);
+                    color: var(--lightBeige);
+                }
+            }
+
+            .card__content{
+                display: flex;
+                justify-content: space-between;
+                flex: 1 1 auto;
+
+                .coffee__info{
+                    display: flex;
+                    flex-direction: column;
+                    width: 25%;
+                    flex: 1 1 auto;
+
+                    .header{
+                        font-weight: 700;
+                        font-size: 3rem;
+                        line-height: 1;
+                    }
+
+                    .ingredients__header{
+                        margin-top: auto;
+                        border-bottom: 1px solid var(--darkBrown);
+                        padding-bottom: 5px;
+                        margin-bottom: 10px;
+                    }
+
+                    .ingredients{
+                        font-size: 0.9rem;
+                        margin-bottom: $mb;
+                    }
+
+                    .allergies__info{
+                        display: flex;
+                        gap: 10px;
+                        justify-content: center;
+                        font-size: 0.9rem;
+
+                        svg{
+                            fill: var(--darkBrown);
+                            width: 20px;
+                            height: 20px;
+                        }
+                    }
+                }
+
+                .price{
+                    width: 50%;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    gap: 5px;
+                    align-items: center;
+                    justify-content: flex-end;
+                    font-weight: 700;
+                    font-size: 2rem;
+                    line-height: 1;
+                    .vat{
+                        font-size: 0.8rem;
+                        font-weight: normal;
+                    }
+                }
+
+                .cart{
+                    display: flex;
+                    width: 25%;
+                    flex-direction: column;
+                    gap: 10px;
+                    align-items: center;
+                    justify-content: flex-end;
+
+                    .amount__btns{
+                        display: flex;
+                        justify-content: center;
+                        width: 100%;
+                        gap: 10px;
+
+                        .amount__btn{
+                            border: 1px solid var(--black);
+                            color: var(--black);
+                            width: 45px;
+                            height: 45px;
+                            border-radius: 50px;
+                            display: grid;
+                            place-content: center;
+                            cursor: pointer;
+                        }
+
+                        .active{
+                            background-color: var(--black);
+                            color: var(--lightBeige);
+                        }
+
+                        .amount__btn_custom{
+                            border: 1px solid var(--black);
+                            color: var(--black);
+                            border-radius: 50px;
+                            padding: 0px 20px;
+                            display: flex;
+                            align-items: center;
+                            width: 150px;
+                            height: 45px;
+                            appearance: none;
+                            background-color: transparent;
+                            
+                        }
+                    }
+
+                    .cart__btn{
+                            display: grid;
+                            place-content: center;
+                            padding: 10px 20px;
+                            width: 100%;
+                            height: auto;
+                            background-color: var(--black);
+                            border-radius: 50px;
+                            border: 1px solid var(--black);
+                            cursor: pointer;
+                            transition: all 0.3s ease;
+
+                            &:hover{
+                                background-color: var(--lightBeige);
+
+                                svg{
+                                    fill: var(--black);
+                                }
+
+                            }
+
+                            svg{
+                                fill: var(--lightBeige);
+                            }
+                        }
+              
+                }
+
+            }
+
+            .next__btn, .prev__btn{
+                    position: absolute;
+                    top: 50%;
+                    transform: translateY(-50%);
+                    cursor: pointer;
+
+                    svg{
+                        width: 40px;
+                        height: 40px;
+                    }
+                }
+
+                .next__btn{
+                    right: 20px;
+                }
+
+                .prev__btn{
+                    left: 20px;
+                }
         }
     }
 }
