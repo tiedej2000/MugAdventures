@@ -1,21 +1,20 @@
 :root{
-    --darkGreen: #171c15;
-    --lightGreen: #314338;
+    // section colors
 
-    --lightBeige: #faf5e4;
-    --regBeige: hsla(30, 82%, 66%, 1);
-    
-    --lightBrown: #dfb5b3;
-    --regBrown: #4b2e2d;
-    --darkBrown: #2d1e1e;
+    --homeColor: #a68a64;
+    --beginnersColor: #a4ac86;
+    --erfahreneColor: #656d4a;
+    --weltColor: #414833;
+    --shopColor: #936639;
+    --profilColor: #7f4f24;
+    --supportColor: #582f0e;
 
-    --black: black;
+    //main colors
+    --mainBG: #faf5e4;
+    --softBlack: #23211f;
 
 
-    //text color for sections
 
-    --HMtext: #090606;
-    --BCtext: #F6EAE9;
 }
 
 $poppins: "Poppins", sans-serif;
@@ -30,7 +29,7 @@ html{
 }
 
 body{
-    background-color: var(--lightBeige);
+    background-color: var(--mainBG);
     height: auto;
     width: 100vw;
 }
@@ -50,10 +49,9 @@ nav{
     position: fixed;
 
     .card{
-        background: linear-gradient(45deg, rgb(25, 0, 255) 0%, rgb(25, 0, 255) 100%);;
         width: 100%;
         display: flex;
-        color: var(--lightBeige);
+        color: var(--mainBG);
         padding: 10px;
         justify-content: space-between;
         gap: 10px;
@@ -85,7 +83,7 @@ nav{
 
         .card__index{
             padding-right: 10px;
-            border-right: 1px solid var(--lightBeige);
+            border-right: 1px solid var(--mainBG);
         }
 
         .card__content{
@@ -115,23 +113,31 @@ nav{
     }
 
     #card-home{
-        background: linear-gradient(45deg, hsla(30, 34%, 49%, 1) 0%, hsla(30, 82%, 66%, 1) 100%);
+        background-color: var(--homeColor);
     }
 
     #card-beginners-corner{
-        background: linear-gradient(45deg, hsla(2, 25%, 24%, 1) 0%, hsla(2, 34%, 42%, 1) 100%);
+        background-color: var(--beginnersColor);
     }
 
     #card-erfahrene-geniesser{
-        background: linear-gradient(45deg, hsla(103, 14%, 10%, 1) 0%, hsla(103, 19%, 29%, 1) 100%);
+        background-color: var(--erfahreneColor);
     }
 
     #card-welt-des-kaffees{
-        background: linear-gradient(45deg, hsla(143, 16%, 23%, 1) 0%, hsla(143, 23%, 39%, 1) 100%);
+        background-color: var(--weltColor);
+    }
+
+    #card-shop{
+        background-color: var(--shopColor);
+    }
+
+    #card-profil{
+        background-color: var(--profilColor);
     }
 
     #card-support{
-        
+        background-color: var(--supportColor);
     }
 }
 
@@ -180,9 +186,9 @@ nav{
 }
 
 #section-home{
-    color: var(--HMtext);
+    color: var(--softBlack);
     .mug__adventure{
-        border: 1px solid var(--darkBrown);
+        border: 1px solid var(--softBlack);
         padding: 150px 20px 20px 20px;
     
         h1{
@@ -192,53 +198,55 @@ nav{
     }
 
     .divider__MA{
-        background-color: var(--regBeige);
+        background-color: var(--homeColor);
         font-size: 1.2rem;
+        color: var(--mainBG);
     }
 
     .home{
-        background-color: var(--regBeige);
+        background-color: var(--homeColor);
         padding: 20px 20px 300px 20px;
+        color: var(--mainBG);
     }
 }
 
 #section-beginners-corner{
-    color: var(--BCtext);
+    color: var(--mainBG);
 
     .dividers{
         display: flex;
         gap: 20px;
 
         .divider__BC1{
-            background-color: var(--regBrown);
+            background-color: var(--beginnersColor);
             width: 25%;
         }
 
         .divider__BC2{
-            background-color: var(--regBrown);
+            background-color: var(--beginnersColor);
             width: 75%;
         }
 
     }
 
     .beginners__corner{
-        background-color: var(--regBrown);
+        background-color: var(--beginnersColor);
         display: flex;
     }
     
 }
 
 #section-shop{
-    color: var(--darkBrown);
+    color: var(--softBlack);
     
     .divider__shop{
-        background-color: blue;
-        color: var(--lightBeige);
+        background-color: var(--shopColor);
+        color: var(--mainBG);
     }
 
     .reg__tile{
         width: 33.333%;
-        border: 1px solid var(--darkBrown);
+        border: 1px solid var(--softBlack);
         border-radius: 10px;
         padding: 20px;
     }
@@ -265,7 +273,7 @@ nav{
                 display: flex;
                 justify-content: space-between;
                 font-size: 1.4rem;
-                border-bottom: 1px solid var(--darkBrown);
+                border-bottom: 1px solid var(--softBlack);
                 margin-bottom: 10px;
 
                 .header{
@@ -287,7 +295,7 @@ nav{
                 display: grid;
                 place-content: center;
                 width: 100%;
-                background-color: black;
+                background-color: var(--softBlack);
                 padding: 10px 20px;
                 border-radius: 50px;
                 cursor: pointer;
@@ -295,15 +303,15 @@ nav{
                 transition: all 0.3s ease;
 
                 svg{
-                    fill: var(--lightBeige);
+                    fill: var(--mainBG);
                 }
 
                 &:hover{
-                    background-color: var(--lightBeige);
-                    border: 1px solid var(--darkBrown);
+                    background-color: var(--mainBG);
+                    border: 1px solid var(--softBlack);
 
                     svg{
-                        fill: var(--darkBrown);
+                        fill: var(--softBlack);
                     }
                 }
             }
@@ -313,19 +321,20 @@ nav{
     .shop{
         display: flex;
         gap: 20px;
-        width: 100vw;
+        width: auto;
         overflow-x: scroll;
         overflow-y: hidden;
-
+        scroll-behavior: smooth;
+        scrollbar-width: none;
 
         .shop__card{
-            border: 1px solid var(--darkBrown);
+            border: 1px solid var(--softBlack);
             border-radius: 10px;
-            padding: 20px 40px 40px 40px;
+            padding: 100px 40px 40px 40px;
             display: flex;
             flex-direction: column;
             height: 85vh;
-            width: 75%;
+            width: 75vw;
             flex-shrink: 0;
             position: relative;
 
@@ -338,19 +347,24 @@ nav{
                 gap: 20px;
                 justify-content: center;
                 margin-bottom: $mb;
+                position: absolute;
+                top: 20px;
+                left: 50%;
+                transform: translateX(-50%);
+
 
                 .categorie__item{
                     padding: 10px 30px;
                     border-radius: 50px;
-                    border: 1px solid var(--darkBrown);
-                    color: var(--darkBrown);
+                    border: 1px solid var(--softBlack);
+                    color: var(--softBlack);
                     font-size: 0.9rem;
                     cursor: pointer;
                 }
 
                 .active{
-                    background-color: var(--black);
-                    color: var(--lightBeige);
+                    background-color: var(--softBlack);
+                    color: var(--mainBG);
                 }
             }
 
@@ -373,7 +387,7 @@ nav{
 
                     .ingredients__header{
                         margin-top: auto;
-                        border-bottom: 1px solid var(--darkBrown);
+                        border-bottom: 1px solid var(--softBlack);
                         padding-bottom: 5px;
                         margin-bottom: 10px;
                     }
@@ -390,7 +404,7 @@ nav{
                         font-size: 0.9rem;
 
                         svg{
-                            fill: var(--darkBrown);
+                            fill: var(--softBlack);
                             width: 20px;
                             height: 20px;
                         }
@@ -429,29 +443,30 @@ nav{
                         gap: 10px;
 
                         .amount__btn{
-                            border: 1px solid var(--black);
-                            color: var(--black);
+                            border: 1px solid var(--softBlack);
+                            color: var(--softBlack);
                             width: 45px;
                             height: 45px;
                             border-radius: 50px;
+                            padding: 20px;
                             display: grid;
                             place-content: center;
                             cursor: pointer;
                         }
 
                         .active{
-                            background-color: var(--black);
-                            color: var(--lightBeige);
+                            background-color: var(--softBlack);
+                            color: var(--mainBG);
                         }
 
                         .amount__btn_custom{
-                            border: 1px solid var(--black);
-                            color: var(--black);
+                            border: 1px solid var(--softBlack);
+                            color: var(--softBlack);
                             border-radius: 50px;
                             padding: 0px 20px;
                             display: flex;
                             align-items: center;
-                            width: 150px;
+                            width: 100%;
                             height: 45px;
                             appearance: none;
                             background-color: transparent;
@@ -465,23 +480,23 @@ nav{
                             padding: 10px 20px;
                             width: 100%;
                             height: auto;
-                            background-color: var(--black);
+                            background-color: var(--softBlack);
                             border-radius: 50px;
-                            border: 1px solid var(--black);
+                            border: 1px solid var(--softBlack);
                             cursor: pointer;
                             transition: all 0.3s ease;
 
                             &:hover{
-                                background-color: var(--lightBeige);
+                                background-color: var(--mainBG);
 
                                 svg{
-                                    fill: var(--black);
+                                    fill: var(--softBlack);
                                 }
 
                             }
 
                             svg{
-                                fill: var(--lightBeige);
+                                fill: var(--mainBG);
                             }
                         }
               
@@ -498,6 +513,7 @@ nav{
                     svg{
                         width: 40px;
                         height: 40px;
+                         fill: var(--softBlack);
                     }
                 }
 
