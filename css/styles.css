@@ -207,7 +207,31 @@ nav #card-support {
   border: 1px solid var(--softBlack);
   border-radius: 10px;
   padding: 20px;
-  height: auto;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
+}
+#section-shop .reg__tile .buy__btn {
+  display: grid;
+  place-content: center;
+  width: 100%;
+  background-color: var(--softBlack);
+  padding: 10px 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  border: 1px solid transparent;
+  transition: all 0.3s ease;
+  margin-top: 20px;
+}
+#section-shop .reg__tile .buy__btn svg {
+  fill: var(--mainBG);
+}
+#section-shop .reg__tile .buy__btn:hover {
+  background-color: var(--mainBG);
+  border: 1px solid var(--softBlack);
+}
+#section-shop .reg__tile .buy__btn:hover svg {
+  fill: var(--softBlack);
 }
 #section-shop .empfehlungen {
   display: flex;
@@ -218,29 +242,30 @@ nav #card-support {
   margin: auto;
   display: flex;
   flex-direction: column;
+  height: 475px;
+}
+#section-shop .empfehlungen .empfehlungen__content:hover .description {
+  max-height: 100px;
+  opacity: 1;
+}
+#section-shop .empfehlungen .empfehlungen__content:hover .item {
+  height: 300px;
 }
 #section-shop .empfehlungen .empfehlungen__content:hover .item img {
   transform: scale(0.7);
-}
-#section-shop .empfehlungen .empfehlungen__content:hover .item {
-  transform: translateY(-50px);
-}
-#section-shop .empfehlungen .empfehlungen__content:hover .description__wrapper .description {
-  opacity: 1;
-  height: 85px;
-  transform: translateY(-85px);
-}
-#section-shop .empfehlungen .empfehlungen__content:hover .subheader, #section-shop .empfehlungen .empfehlungen__content:hover .header__content, #section-shop .empfehlungen .empfehlungen__content:hover .rating {
-  transform: translateY(-85px);
 }
 #section-shop .empfehlungen .empfehlungen__content .item {
   display: flex;
   justify-content: center;
   align-items: center;
-  height: auto;
+  height: 400px;
   transition: all 0.3s ease;
 }
 #section-shop .empfehlungen .empfehlungen__content .item img {
+  width: 100%;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
   transition: all 0.3s ease;
 }
 #section-shop .empfehlungen .empfehlungen__content .subheader {
@@ -267,44 +292,13 @@ nav #card-support {
   width: 20px;
   height: 20px;
 }
-#section-shop .empfehlungen .empfehlungen__content .description__wrapper {
-  max-height: 0;
-  height: 0;
-  position: relative;
-  transition: all 0.3s ease;
-}
-#section-shop .empfehlungen .empfehlungen__content .description__wrapper .description {
-  position: absolute;
+#section-shop .empfehlungen .empfehlungen__content .description {
   font-size: 0.9rem;
-  left: 0;
-  top: 0;
-  height: 0;
   opacity: 0;
+  max-height: 0;
   overflow: hidden;
   display: flex;
   transition: all 0.3s ease;
-}
-#section-shop .empfehlungen .empfehlungen__content .buy__btn {
-  display: grid;
-  place-content: center;
-  width: 100%;
-  background-color: var(--softBlack);
-  padding: 10px 20px;
-  border-radius: 50px;
-  cursor: pointer;
-  border: 1px solid transparent;
-  transition: all 0.3s ease;
-  margin-top: 20px;
-}
-#section-shop .empfehlungen .empfehlungen__content .buy__btn svg {
-  fill: var(--mainBG);
-}
-#section-shop .empfehlungen .empfehlungen__content .buy__btn:hover {
-  background-color: var(--mainBG);
-  border: 1px solid var(--softBlack);
-}
-#section-shop .empfehlungen .empfehlungen__content .buy__btn:hover svg {
-  fill: var(--softBlack);
 }
 #section-shop .shop {
   display: flex;

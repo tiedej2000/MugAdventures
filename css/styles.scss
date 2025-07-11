@@ -249,7 +249,35 @@ nav{
         border: 1px solid var(--softBlack);
         border-radius: 10px;
         padding: 20px;
-        height: auto;
+        height: 600px;
+        display: flex;
+        flex-direction: column;
+
+        .buy__btn{
+                display: grid;
+                place-content: center;
+                width: 100%;
+                background-color: var(--softBlack);
+                padding: 10px 20px;
+                border-radius: 50px;
+                cursor: pointer;
+                border: 1px solid transparent;
+                transition: all 0.3s ease;
+                margin-top: $mb;
+
+                svg{
+                    fill: var(--mainBG);
+                }
+
+                &:hover{
+                    background-color: var(--mainBG);
+                    border: 1px solid var(--softBlack);
+
+                    svg{
+                        fill: var(--softBlack);
+                    }
+                }
+            }
     }
 
     .empfehlungen{
@@ -261,37 +289,34 @@ nav{
             margin: auto;
             display: flex;
             flex-direction: column;
+            height: 475px;
 
-            &:hover {
+            &:hover{
+                .description{
+                    max-height: 100px;
+                    opacity: 1;
+                }
+
+                .item{
+                    height: 300px;
+                }
 
                 .item img{
                     transform: scale(0.7);
                 }
-
-                .item {
-                    transform: translateY(-50px);
-                }
-
-                .description__wrapper .description {
-                    opacity: 1;
-                    height: 85px;
-                    transform: translateY(-85px);
-                }
-
-                .subheader, .header__content, .rating{
-                    transform: translateY(-85px);
-                }
-
             }
 
             .item{
                 display: flex;
                 justify-content: center;
                 align-items: center;
-                height: auto;
+                height: 400px;
                 transition: all 0.3s ease;
 
                 img{
+                    width: 100%;
+                    height: auto;
+                    object-fit: contain;
                     transition: all 0.3s ease;
                 }
             }
@@ -325,49 +350,14 @@ nav{
                 }
             }
             
-            .description__wrapper{
+
+            .description{
+                font-size: 0.9rem;
+                opacity: 0;
                 max-height: 0;
-                height: 0;
-                position: relative;
+                overflow: hidden;
+                display: flex;
                 transition: all 0.3s ease;
-
-               .description{
-                    position: absolute;
-                    font-size: 0.9rem;
-                    left: 0;
-                    top: 0;
-                    height: 0;
-                    opacity: 0;
-                    overflow: hidden;
-                    display: flex;
-                    transition: all 0.3s ease;
-                }
-            }
-
-            .buy__btn{
-                display: grid;
-                place-content: center;
-                width: 100%;
-                background-color: var(--softBlack);
-                padding: 10px 20px;
-                border-radius: 50px;
-                cursor: pointer;
-                border: 1px solid transparent;
-                transition: all 0.3s ease;
-                margin-top: $mb;
-
-                svg{
-                    fill: var(--mainBG);
-                }
-
-                &:hover{
-                    background-color: var(--mainBG);
-                    border: 1px solid var(--softBlack);
-
-                    svg{
-                        fill: var(--softBlack);
-                    }
-                }
             }
         }
     }
