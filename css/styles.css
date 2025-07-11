@@ -50,15 +50,15 @@ nav .card {
   height: auto;
 }
 nav .card:hover {
-  color: var(--darkBrown);
+  color: var(--softBlack);
   background: transparent !important;
-  border: 1px solid var(--darkBrown);
+  border: 1px solid var(--softBlack);
 }
 nav .card:hover .card__index {
-  border-right: 1px solid var(--darkBrown);
+  border-right: 1px solid var(--softBlack);
 }
 nav .card:hover svg {
-  fill: var(--darkBrown);
+  fill: var(--softBlack);
 }
 nav .card:hover .card__content .card__list {
   opacity: 1;
@@ -207,6 +207,7 @@ nav #card-support {
   border: 1px solid var(--softBlack);
   border-radius: 10px;
   padding: 20px;
+  height: auto;
 }
 #section-shop .empfehlungen {
   display: flex;
@@ -215,14 +216,37 @@ nav #card-support {
 }
 #section-shop .empfehlungen .empfehlungen__content {
   margin: auto;
+  display: flex;
+  flex-direction: column;
+}
+#section-shop .empfehlungen .empfehlungen__content:hover .item img {
+  transform: scale(0.7);
+}
+#section-shop .empfehlungen .empfehlungen__content:hover .item {
+  transform: translateY(-50px);
+}
+#section-shop .empfehlungen .empfehlungen__content:hover .description__wrapper .description {
+  opacity: 1;
+  height: 85px;
+  transform: translateY(-85px);
+}
+#section-shop .empfehlungen .empfehlungen__content:hover .subheader, #section-shop .empfehlungen .empfehlungen__content:hover .header__content, #section-shop .empfehlungen .empfehlungen__content:hover .rating {
+  transform: translateY(-85px);
 }
 #section-shop .empfehlungen .empfehlungen__content .item {
-  display: grid;
-  place-content: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: auto;
+  transition: all 0.3s ease;
+}
+#section-shop .empfehlungen .empfehlungen__content .item img {
+  transition: all 0.3s ease;
 }
 #section-shop .empfehlungen .empfehlungen__content .subheader {
   font-weight: 300;
   font-size: 0.8rem;
+  transition: all 0.3s ease;
 }
 #section-shop .empfehlungen .empfehlungen__content .header__content {
   display: flex;
@@ -230,17 +254,35 @@ nav #card-support {
   font-size: 1.4rem;
   border-bottom: 1px solid var(--softBlack);
   margin-bottom: 10px;
+  transition: all 0.3s ease;
 }
 #section-shop .empfehlungen .empfehlungen__content .header__content .header {
   font-weight: 700;
 }
 #section-shop .empfehlungen .empfehlungen__content .rating {
   display: flex;
-  margin-bottom: 20px;
+  transition: all 0.3s ease;
 }
 #section-shop .empfehlungen .empfehlungen__content .rating svg {
   width: 20px;
   height: 20px;
+}
+#section-shop .empfehlungen .empfehlungen__content .description__wrapper {
+  max-height: 0;
+  height: 0;
+  position: relative;
+  transition: all 0.3s ease;
+}
+#section-shop .empfehlungen .empfehlungen__content .description__wrapper .description {
+  position: absolute;
+  font-size: 0.9rem;
+  left: 0;
+  top: 0;
+  height: 0;
+  opacity: 0;
+  overflow: hidden;
+  display: flex;
+  transition: all 0.3s ease;
 }
 #section-shop .empfehlungen .empfehlungen__content .buy__btn {
   display: grid;
@@ -252,6 +294,7 @@ nav #card-support {
   cursor: pointer;
   border: 1px solid transparent;
   transition: all 0.3s ease;
+  margin-top: 20px;
 }
 #section-shop .empfehlungen .empfehlungen__content .buy__btn svg {
   fill: var(--mainBG);
