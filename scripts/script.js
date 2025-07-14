@@ -16,30 +16,78 @@ document.addEventListener("DOMContentLoaded", function () {
     tiles.forEach(tile => observer.observe(tile));
 });
 
- new rive.Rive({
-    src: '../media/mocca_coffee_pot.riv',
-    canvas: document.getElementById('rive-canvas'),
-    autoplay: true,
-  });
 
 //shop kaffee content
 
 const coffeeSets = {
-    item1:{
-        img1: "../media/shop/Bohne_1.png", img2: "media/Bohne_1b.png" 
+    item1: {
+        img0: "./media/shop/Gesamt_1.webp",
+        img1: "./media/shop/Kaffee_1.webp",
+        img2: "./media/shop/Bohnen_1.webp"
+    },
+    item2: {
+        img0: "./media/shop/Gesamt_2.webp",
+        img1: "./media/shop/Kaffee_2.webp",
+        img2: "./media/shop/Bohnen_2.webp"
+    },
+    item3: {
+        img0: "./media/shop/Gesamt_3.webp",
+        img1: "./media/shop/Kaffee_3.webp",
+        img2: "./media/shop/Bohnen_3.webp"
+    },
+    item4: {
+        img0: "./media/shop/Gesamt_4.webp",
+        img1: "./media/shop/Kaffee_4.webp",
+        img2: "./media/shop/Bohnen_4.webp"
+    },
+    item5: {
+        img0: "./media/shop/Gesamt_5.webp",
+        img1: "./media/shop/Kaffee_5.webp",
+        img2: "./media/shop/Bohnen_5.webp"
+    },
+    item6: {
+        img0: "./media/shop/Gesamt_6.webp",
+        img1: "./media/shop/Kaffee_6.webp",
+        img2: "./media/shop/Bohnen_6.webp"
+    },
+    item7: {
+        img0: "./media/shop/Gesamt_7.webp",
+        img1: "./media/shop/Kaffee_7.webp",
+        img2: "./media/shop/Bohnen_7.webp"
     }
-}
+};
+
+
 //
 
-const shopCard1 = document.querySelector('.shop__card #item1')
-const nextBtn = document.querySelector('.next_item__btn')
+document.querySelectorAll('.shop__card').forEach(shopCard =>{
+    const cardId = shopCard.id
+    const itemDisplayImg = shopCard.querySelector('.item__display img')
+    let currIndex = 0
 
-shopCard1.style.backgroundImage = `url('${coffeeSets.item1.img1}')`;
+    if(coffeeSets[cardId]){
+        itemDisplayImg.src = coffeeSets[cardId][`img${currIndex}`];
+        console.log(currIndex)
+
+        const nextBtn = shopCard.querySelector('.next_item__btn')
+        nextBtn.addEventListener('click', () =>{
+            currIndex++
+            if(currIndex > 2){
+                currIndex = 0
+            }
+            itemDisplayImg.src = coffeeSets[cardId][`img${currIndex}`];
+        })
+
+        const prevBtn = shopCard.querySelector('.prev_item__btn')
+        prevBtn.addEventListener('click', () =>{
+            currIndex--
+            if(currIndex < 0){
+                currIndex = 2
+            } 
+            itemDisplayImg.src = coffeeSets[cardId][`img${currIndex}`];
+        })
+    }
+})
 
 
 
-//rive
-new rive.Rive({
-    src: 'mocca_coffee_pot (500x500).riv',
-    canvas: document.getElementById('rive-canvas'),
-});
