@@ -319,8 +319,6 @@ nav #card-support {
   width: 75vw;
   flex-shrink: 0;
   position: relative;
-  background: url("../media/shop/placeholder_coffee_single.png") no-repeat 50% 50%;
-  background-size: 35%;
 }
 #section-shop .shop .shop__card .categories__wrapper {
   width: 100%;
@@ -478,4 +476,14 @@ nav #card-support {
 }
 #section-shop .shop .shop__card .prev__btn {
   left: 20px;
+}
+#section-shop .shop .shop__card .next_item__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 30%;
+  cursor: pointer;
+}
+#section-shop .shop #item1 {
+  background-size: 30%;
 }/*# sourceMappingURL=styles.css.map */

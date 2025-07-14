@@ -382,9 +382,6 @@ nav{
             flex-shrink: 0;
             position: relative;
 
-            background: url('../media/shop/placeholder_coffee_single.png') no-repeat 50% 50%;
-            background-size: 35%;
-
             .categories__wrapper{
                 width: 100%;
                 display: flex;
@@ -559,15 +556,27 @@ nav{
                         height: 40px;
                          fill: var(--softBlack);
                     }
-                }
+            }
 
-                .next__btn{
+            .next__btn{
                     right: 20px;
-                }
+            }
 
-                .prev__btn{
+            .prev__btn{
                     left: 20px;
-                }
+            }
+
+            .next_item__btn{
+                position: absolute;
+                top: 50%;
+                transform: translateY(-50%);
+                right: 30%;
+                cursor: pointer;
+            }
+        }
+
+        #item1{
+            background-size: 30%;
         }
     }
 }
