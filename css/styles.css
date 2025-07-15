@@ -17,7 +17,8 @@ html {
 body {
   background-color: var(--mainBG);
   height: auto;
-  width: 100vw;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 main {
@@ -33,6 +34,9 @@ nav {
   gap: 20px;
   padding: 20px 25px 20px 20px;
   position: fixed;
+}
+nav::-webkit-scrollbar {
+  display: none;
 }
 nav .card {
   width: 100%;
