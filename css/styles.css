@@ -287,6 +287,18 @@ nav #card-support {
 #section-beginners-corner .glossar .glossar__list .glossar__item ul {
   padding-left: 40px;
 }
+#section-beginners-corner .glossar .glossar__cta {
+  display: flex;
+  flex-direction: column;
+  margin-top: 20px;
+}
+#section-beginners-corner .glossar .glossar__cta .heading {
+  font-size: clamp(1rem, 1.2vw, 2rem);
+  font-weight: 700;
+}
+#section-beginners-corner .glossar .glossar__cta .text {
+  font-size: var(--regFontSize);
+}
 
 #section-shop {
   color: var(--softBlack);
@@ -369,7 +381,7 @@ nav #card-support {
 #section-shop .empfehlungen .empfehlungen__content .header__content {
   display: flex;
   justify-content: space-between;
-  font-size: 1.4rem;
+  font-size: clamp(1rem, 1.2vw, 2rem);
   border-bottom: 1px solid var(--softBlack);
   margin-bottom: 10px;
   transition: all 0.3s ease;
@@ -596,6 +608,7 @@ nav #card-support {
   width: 100%;
   height: 100%;
   z-index: -1;
+  pointer-events: none;
 }
 #section-shop .shop .shop__card .item__display img {
   -o-object-fit: contain;
