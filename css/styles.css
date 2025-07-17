@@ -619,7 +619,7 @@ nav #card-support {
   display: flex;
   flex-direction: column;
   width: 100%;
-  height: 100%;
+  height: auto;
   justify-content: center;
   align-items: center;
   color: var(--softBlack);
