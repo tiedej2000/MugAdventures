@@ -57,9 +57,6 @@ const coffeeSets = {
     }
 };
 
-
-//
-
 document.querySelectorAll('.shop__card').forEach(shopCard =>{
     const cardId = shopCard.id
     const itemDisplayImg = shopCard.querySelector('.item__display img')
@@ -89,5 +86,30 @@ document.querySelectorAll('.shop__card').forEach(shopCard =>{
     }
 })
 
+//faq
 
+const faqItems = document.querySelectorAll('.faq__item')
 
+faqItems.forEach(item => {
+    const question = item.querySelector('.faq__question')
+    const answer = item.querySelector('.faq__answer')
+    const icon = item.querySelector('img')
+
+    question.addEventListener('click', () => {
+        const isActive = answer.classList.contains('active')
+
+        faqItems.forEach(otherItem => {
+            const otherAnswer = otherItem.querySelector('.faq__answer')
+            const otherIcon = otherItem.querySelector('img')
+            if (otherAnswer) otherAnswer.classList.remove('active')
+            if (otherIcon) otherIcon.src = './media/support/arrow-circle-down.svg'
+        });
+
+        if (!isActive) {
+            answer.classList.add('active')
+            if (icon) icon.src = './media/support/arrow-circle-up.svg'
+        } else {
+            if (icon) icon.src = './media/support/arrow-circle-down.svg'
+        }
+    })
+});
