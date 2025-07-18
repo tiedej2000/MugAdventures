@@ -14,7 +14,7 @@
     --softBlack: #23211f;
 
     
-    --regFontSize: clamp(0.6rem, 0.8vw, 1.4rem);
+    --regFontSize: clamp(0.8rem, 0.8vw, 1.4rem);
 
 
 }
@@ -212,7 +212,7 @@ nav{
 }
 
 .tile__subheading{
-    font-size: clamp(0.8rem, 1.4vw, 1.6rem);
+    font-size: clamp(0.8rem, 1vw, 1.6rem);
     font-weight: 400;
 }
 
@@ -368,6 +368,7 @@ nav{
                 display: flex;
                 flex-direction: column;
                 width: auto;
+                font-size: var(--regFontSize);
                 .heading{
                     font-size: clamp(1rem, 1.2vw, 2rem);
                     font-weight: 700;

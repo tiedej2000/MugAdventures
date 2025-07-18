@@ -8,7 +8,7 @@
   --supportColor: #582f0e;
   --mainBG: #faf5e4;
   --softBlack: #23211f;
-  --regFontSize: clamp(0.6rem, 0.8vw, 1.4rem);
+  --regFontSize: clamp(0.8rem, 0.8vw, 1.4rem);
 }
 
 html {
@@ -176,7 +176,7 @@ nav #card-support {
 }
 
 .tile__subheading {
-  font-size: clamp(0.8rem, 1.4vw, 1.6rem);
+  font-size: clamp(0.8rem, 1vw, 1.6rem);
   font-weight: 400;
 }
 
@@ -317,6 +317,7 @@ nav #card-support {
   display: flex;
   flex-direction: column;
   width: auto;
+  font-size: var(--regFontSize);
 }
 #section-beginners-corner .tipps__collection .tipps__collection_card .tipps__content .heading {
   font-size: clamp(1rem, 1.2vw, 2rem);
