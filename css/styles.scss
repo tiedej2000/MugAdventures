@@ -205,14 +205,14 @@ nav{
 }
 
 .tile__heading{
-    font-size: 5rem;
+    font-size: clamp(3rem, 4vw, 6rem);
     line-height: 1.1;
     font-weight: 700;
     margin-bottom: 10px;
 }
 
 .tile__subheading{
-    font-size: 1rem;
+    font-size: clamp(0.8rem, 1.4vw, 1.6rem);
     font-weight: 400;
 }
 
@@ -396,6 +396,7 @@ nav{
         flex-direction: column; 
         color: var(--softBlack);
         border: 1px solid var(--softBlack);
+        font-size: var(--regFontSize);
 
 
         .tile__heading, .tile__subheading{
@@ -409,6 +410,8 @@ nav{
             flex-direction: column;
             margin-top: 40px;
             overflow-y: scroll;
+            font-size: var(--regFontSize);
+
 
             .glossar__item{
                 display: flex;
@@ -657,7 +660,7 @@ nav{
                     }
 
                     .ingredients{
-                        font-size: 0.9rem;
+                        font-size: var(--regFontSize);
                         margin-bottom: $mb;
                     }
 
