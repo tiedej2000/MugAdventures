@@ -194,6 +194,16 @@ nav{
     font-size: clamp(0.6rem, 0.8vw, 1.2rem);
 }
 
+.reg__tile{
+    width: 33.333%;
+    border: 1px solid var(--softBlack);
+    border-radius: 10px;
+    padding: 20px;
+    height: 600px;
+    display: flex;
+    flex-direction: column;
+}
+
 .tile__heading{
     font-size: 5rem;
     line-height: 1.1;
@@ -281,11 +291,105 @@ nav{
         background-color: var(--beginnersColor);
         display: flex;
         flex-direction: column;
-        
-        .tile__heading, .tile__subheading{
-            text-align: center;
+
+        .tipps__hero{
+            width: 100%;
+            height: 500px;
+            margin-top: 20px;
+            img{
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                border-radius: 10px;
+                box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+            }
         }
     }
+
+    .tipps__card{
+        border: 1px solid var(--softBlack);
+        color: var(--softBlack);
+        display: flex;
+        width: 100%;
+        gap: 40px;
+        padding: 0;
+
+        .tipps__content{
+           display: flex;
+           flex-direction: column;
+           gap: 10px;
+           width: auto;
+           justify-content: flex-end;
+           padding: 20px;
+
+           .heading{
+            font-size: clamp(1rem, 1.2vw, 2rem);
+            font-weight: 700;
+           }
+
+           .description{
+            font-size: var(--regFontSize);
+           }
+        }
+
+        .img__wrapper{
+            height: 300px;
+            width: 300px;
+            flex-shrink: 0;
+            border-top-right-radius: 10px;border-bottom-right-radius: 10px;
+            
+            img{
+                height: 100%;
+                width: 100%;
+                object-fit: contain;
+                border-top-right-radius: 10px;border-bottom-right-radius: 10px;
+            }
+        }
+    }
+
+    .tipps__collection{
+        display: flex;
+        gap: 20px;
+        width: 100%;
+        margin-bottom: $mb;
+
+        .tipps__collection_card{
+            display: flex;
+            flex-direction: column;
+            background-color: var(--beginnersColor);
+            color: var(--mainBG);
+            border: 0px solid transparent !important;
+            height: auto;
+            padding: 0;
+
+
+            .tipps__content{
+                padding: 10px 20px 20px 20px;
+                display: flex;
+                flex-direction: column;
+                width: auto;
+                .heading{
+                    font-size: clamp(1rem, 1.2vw, 2rem);
+                    font-weight: 700;
+                }
+            }
+
+            .img__wrapper{
+                height: 300px;
+                width: 100%;
+                flex-shrink: 0;
+                img{
+                    border-top-left-radius: 10px;
+                    border-top-right-radius: 10px;
+                    height: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                }
+            }
+        }        
+    }
+
+
 
     .glossar{
         display: flex;
@@ -372,14 +476,6 @@ nav{
     }
 
     .reg__tile{
-        width: 33.333%;
-        border: 1px solid var(--softBlack);
-        border-radius: 10px;
-        padding: 20px;
-        height: 600px;
-        display: flex;
-        flex-direction: column;
-
         .buy__btn{
                 display: grid;
                 place-content: center;
