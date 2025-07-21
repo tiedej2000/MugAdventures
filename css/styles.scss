@@ -15,7 +15,7 @@
 
     
     --regFontSize: clamp(0.8rem, 0.8vw, 1.4rem);
-
+    --headingFontSize: clamp(1rem, 1.2vw, 2rem);
 
 }
 
@@ -469,6 +469,130 @@ nav{
             }
         }
     }
+}
+
+#section-erfahrene-geniesser{
+    color: var(--mainBG);
+
+    .divider__EG{
+        background-color: var(--erfahreneColor);
+    }
+
+    .erfahrene__geniesser, .roestmethoden, .expertentipps{
+        background-color: var(--erfahreneColor);
+        display: flex;
+        flex-direction: column;
+    }  
+
+    .roestmethoden__list{
+        display: flex;
+        flex-direction: column;
+        color: var(--softBlack);
+        border: 1px solid var(--softBlack);
+
+        .heading{
+           font-size: var(--headingFontSize);
+           font-weight: 700;
+        }
+
+        .text{
+            font-size: var(--regFontSize);
+            margin-bottom: 40px;
+
+            &:last-child{
+                margin-bottom: 0;
+            }
+        }
+    }
+
+    .roestmethoden__einfluss{
+        display: flex;
+        flex-direction: column;
+        color: var(--softBlack);
+        border: 1px solid var(--softBlack);
+
+        .heading{
+            font-size: var(--headingFontSize);
+            font-weight: 700;
+        }
+
+
+        .text{
+            font-size: var(--regFontSize);
+        }
+    }
+
+    .expertentipps__list{
+        display: flex;
+        padding: 0;
+        gap: 20px;
+
+        .expertentipps__card{
+            color: var(--mainBG);
+            display: flex;
+            flex-direction: column;
+            width: 33.333%;
+            position: relative;
+
+            .heading{
+                background-color: var(--erfahreneColor);
+                padding: 20px;
+                border-top-left-radius: 20px; border-top-right-radius: 20px;
+            }
+
+            .content{
+                height: auto;
+                position: relative;
+                z-index: 11;
+
+                &:hover {
+                    .preview{
+                        max-height: 0;
+                    }
+
+                    .preview__heading{
+                        bottom: 100%;
+                    }
+                }
+
+                .text{
+                    font: var(--regFontSize);
+                    color: var(--softBlack);
+                    padding: 20px;
+                    border: 1px solid var(--erfahreneColor);
+                    border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;
+                }
+
+                .preview{
+                    z-index: 12;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    background-color: var(--erfahreneColor);
+                    width: 100%;
+                    height: 100%;
+                    border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;
+                    max-height: 100%;
+                    transition: all 0.3s ease;
+                }
+
+                .preview__heading{
+                    z-index: 13;
+                    position: absolute;
+                    width: 100%;
+                    height: auto;
+                    bottom: 5%;
+                    display: grid;
+                    justify-content: center;
+                    color: var(--mainBG);
+                    transition: all 0.3s ease;
+                    font-size: var(--headingFontSize);
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+
 }
 
 #section-shop{
