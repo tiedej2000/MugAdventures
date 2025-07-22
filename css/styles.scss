@@ -205,15 +205,19 @@ nav{
 }
 
 .tile__heading{
-    font-size: clamp(3rem, 4vw, 6rem);
+    font-size: clamp(2rem, 4vw, 6rem);
     line-height: 1.1;
     font-weight: 700;
-    margin-bottom: 10px;
 }
 
 .tile__subheading{
     font-size: clamp(0.8rem, 1vw, 1.6rem);
     font-weight: 400;
+}
+
+.dividers{
+    display: flex;
+    gap: 20px;
 }
 
 #section-home{
@@ -231,7 +235,7 @@ nav{
 
         p{
             width: 80%;
-            font-size: 1.2rem;
+            font-size: clamp(0.9rem, 1vw, 1.2rem);
             line-height: 1.2;
         }
 
@@ -266,20 +270,14 @@ nav{
 #section-beginners-corner{
     color: var(--mainBG);
 
-    .dividers{
-        display: flex;
-        gap: 20px;
+    .divider__BC1{
+        background-color: var(--beginnersColor);
+        width: 25%;
+    }
 
-        .divider__BC1{
-            background-color: var(--beginnersColor);
-            width: 25%;
-        }
-
-        .divider__BC2{
-            background-color: var(--beginnersColor);
-            width: 75%;
-        }
-
+    .divider__BC2{
+        background-color: var(--beginnersColor);
+        width: 75%;
     }
 
     .beginners__corner{
@@ -356,9 +354,8 @@ nav{
         .tipps__collection_card{
             display: flex;
             flex-direction: column;
-            background-color: var(--beginnersColor);
-            color: var(--mainBG);
-            border: 0px solid transparent !important;
+            color: var(--softBlack);
+            border: 1px solid var(--softBlack);
             height: auto;
             padding: 0;
 
@@ -369,6 +366,7 @@ nav{
                 flex-direction: column;
                 width: auto;
                 font-size: var(--regFontSize);
+
                 .heading{
                     font-size: clamp(1rem, 1.2vw, 2rem);
                     font-weight: 700;
@@ -474,11 +472,21 @@ nav{
 #section-erfahrene-geniesser{
     color: var(--mainBG);
 
-    .divider__EG{
+    .divider__EG1, .divider__EG2{
         background-color: var(--erfahreneColor);
+        display: flex;
+        justify-content: space-between;
     }
 
-    .erfahrene__geniesser, .roestmethoden, .expertentipps{
+    .divider__EG1{
+        width: 25%;
+    }
+
+    .divider__EG2{
+        width: 75%;
+    }
+
+    .roestmethoden, .expertentipps{
         background-color: var(--erfahreneColor);
         display: flex;
         flex-direction: column;
@@ -524,6 +532,7 @@ nav{
 
     .expertentipps__list{
         display: flex;
+        flex-wrap: wrap;
         padding: 0;
         gap: 20px;
 
@@ -531,12 +540,13 @@ nav{
             color: var(--mainBG);
             display: flex;
             flex-direction: column;
-            width: 33.333%;
+            width: calc((100% - 20px) / 2);
             position: relative;
+            cursor: pointer;
 
             .heading{
                 background-color: var(--erfahreneColor);
-                padding: 20px;
+                padding: 25px;
                 border-top-left-radius: 20px; border-top-right-radius: 20px;
             }
 
@@ -551,7 +561,7 @@ nav{
                     }
 
                     .preview__heading{
-                        bottom: 100%;
+                        bottom: 103%;
                     }
                 }
 
@@ -561,6 +571,7 @@ nav{
                     padding: 20px;
                     border: 1px solid var(--erfahreneColor);
                     border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;
+                    min-height: 175px;
                 }
 
                 .preview{
@@ -570,9 +581,9 @@ nav{
                     left: 0;
                     background-color: var(--erfahreneColor);
                     width: 100%;
-                    height: 100%;
+                    height: 85%;
                     border-bottom-left-radius: 20px; border-bottom-right-radius: 20px;
-                    max-height: 100%;
+                    max-height: 85%;
                     transition: all 0.3s ease;
                 }
 
@@ -581,13 +592,14 @@ nav{
                     position: absolute;
                     width: 100%;
                     height: auto;
-                    bottom: 5%;
-                    display: grid;
+                    bottom: 20%;
+                    display: flex;
                     justify-content: center;
+                    align-items: center;
+                    flex-direction: column;
                     color: var(--mainBG);
                     transition: all 0.3s ease;
                     font-size: var(--headingFontSize);
-                    font-weight: 700;
                 }
             }
         }
@@ -598,9 +610,19 @@ nav{
 #section-shop{
     color: var(--softBlack);
     
-    .divider__shop{
+    .divider__shop1, .divider__shop2{
         background-color: var(--shopColor);
         color: var(--mainBG);
+    }
+
+    .divider__shop1{
+        width: 25%;
+    }
+
+    .divider__shop2{
+        width: 75%;
+        display: flex;
+        justify-content: flex-end;
     }
 
     .reg__tile{
