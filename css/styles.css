@@ -674,11 +674,13 @@ nav #card-support {
   flex-direction: column;
   width: 25%;
   flex: 1 1 auto;
+  font-size: var(--regFontSize);
 }
 #section-shop .shop .shop__card .card__content .coffee__info .header {
   font-weight: 700;
   font-size: 3rem;
   line-height: 1;
+  margin-bottom: 10px;
 }
 #section-shop .shop .shop__card .card__content .coffee__info .ingredients__header {
   margin-top: auto;
@@ -690,11 +692,13 @@ nav #card-support {
   font-size: var(--regFontSize);
   margin-bottom: 20px;
 }
+#section-shop .shop .shop__card .card__content .coffee__info .vertraeglichkeit {
+  margin-bottom: 20px;
+}
 #section-shop .shop .shop__card .card__content .coffee__info .allergies__info {
   display: flex;
+  align-items: center;
   gap: 10px;
-  justify-content: center;
-  font-size: 0.9rem;
 }
 #section-shop .shop .shop__card .card__content .coffee__info .allergies__info svg {
   fill: var(--softBlack);
