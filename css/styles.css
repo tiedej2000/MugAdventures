@@ -29,7 +29,7 @@ main {
 }
 
 nav {
-  width: 300px;
+  width: 20vw;
   height: 100vh;
   overflow-y: auto;
   display: flex;
@@ -37,6 +37,7 @@ nav {
   gap: 20px;
   padding: 20px 25px 20px 20px;
   position: fixed;
+  scrollbar-width: none;
 }
 nav::-webkit-scrollbar {
   display: none;
@@ -128,7 +129,7 @@ nav #card-support {
   height: auto;
   display: flex;
   flex-direction: column;
-  margin: 20px 20px 20px 320px;
+  margin: 20px 20px 20px 20vw;
   overflow: hidden;
 }
 
@@ -164,7 +165,7 @@ nav #card-support {
   border: 1px solid var(--softBlack);
   border-radius: 10px;
   padding: 20px;
-  height: 600px;
+  height: auto;
   display: flex;
   flex-direction: column;
 }
@@ -566,14 +567,14 @@ nav #card-support {
   height: 475px;
 }
 #section-shop .empfehlungen .empfehlungen__content:hover .description {
-  max-height: 100px;
+  max-height: 150px;
   opacity: 1;
 }
 #section-shop .empfehlungen .empfehlungen__content:hover .item {
   height: 300px;
 }
 #section-shop .empfehlungen .empfehlungen__content:hover .item img {
-  transform: scale(0.7);
+  transform: scale(0.75);
 }
 #section-shop .empfehlungen .empfehlungen__content .item {
   display: flex;
@@ -617,9 +618,9 @@ nav #card-support {
   font-size: var(--regFontSize);
   opacity: 0;
   max-height: 0;
-  overflow: hidden;
   display: flex;
   transition: all 0.3s ease;
+  pointer-events: none;
 }
 #section-shop .shop {
   display: flex;

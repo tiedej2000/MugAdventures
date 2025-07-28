@@ -42,7 +42,7 @@ main{
 }
 
 nav{
-    width: 300px;
+    width: 20vw;
     height: 100vh;
     overflow-y: auto;
     display: flex;
@@ -50,6 +50,7 @@ nav{
     gap: 20px;
     padding: 20px 25px 20px 20px;
     position: fixed;
+    scrollbar-width: none;
 
     &::-webkit-scrollbar{
         display: none;
@@ -162,7 +163,7 @@ nav{
     height: auto;
     display: flex;
     flex-direction: column;
-    margin: 20px 20px 20px 320px;
+    margin: 20px 20px 20px 20vw;
     overflow: hidden;
 }
 
@@ -199,7 +200,7 @@ nav{
     border: 1px solid var(--softBlack);
     border-radius: 10px;
     padding: 20px;
-    height: 600px;
+    height: auto;
     display: flex;
     flex-direction: column;
 }
@@ -667,7 +668,7 @@ nav{
 
             &:hover{
                 .description{
-                    max-height: 100px;
+                    max-height: 150px;
                     opacity: 1;
                 }
 
@@ -676,7 +677,7 @@ nav{
                 }
 
                 .item img{
-                    transform: scale(0.7);
+                    transform: scale(0.75);
                 }
             }
 
@@ -729,9 +730,9 @@ nav{
                 font-size: var(--regFontSize);
                 opacity: 0;
                 max-height: 0;
-                overflow: hidden;
                 display: flex;
                 transition: all 0.3s ease;
+                pointer-events: none;
             }
         }
     }
