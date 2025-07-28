@@ -29,7 +29,7 @@ main {
 }
 
 nav {
-  width: 20vw;
+  width: 22.5vw;
   height: 100vh;
   overflow-y: auto;
   display: flex;
@@ -70,6 +70,9 @@ nav .card:hover .card__content .card__list {
   opacity: 1;
   max-height: 100px;
 }
+nav .card:hover .card__list {
+  padding-top: 5px;
+}
 nav .card svg {
   cursor: pointer;
 }
@@ -92,7 +95,7 @@ nav .card .card__content .card__list {
   max-height: 0;
   opacity: 0;
   overflow: hidden;
-  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s linear;
+  transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.2s linear, padding 0.3s ease;
 }
 nav .card .card__content .card__list li, nav .card .card__content .card__list a {
   font-size: 0.8rem;
@@ -129,7 +132,7 @@ nav #card-support {
   height: auto;
   display: flex;
   flex-direction: column;
-  margin: 20px 20px 20px 20vw;
+  margin: 20px 20px 20px 22.5vw;
   overflow: hidden;
 }
 
@@ -172,7 +175,7 @@ nav #card-support {
 
 .tile__heading {
   font-size: clamp(2rem, 4vw, 6rem);
-  line-height: 1.1;
+  line-height: 1.4;
   font-weight: 700;
 }
 
@@ -355,6 +358,8 @@ nav #card-support {
   flex-direction: column;
   margin-top: 40px;
   overflow-y: scroll;
+  scroll-behavior: smooth;
+  scroll-snap-type: y mandatory;
   font-size: var(--regFontSize);
 }
 #section-beginners-corner .glossar .glossar__list .glossar__item {
@@ -362,6 +367,7 @@ nav #card-support {
   align-items: center;
   margin-bottom: 80px;
   height: 350px;
+  scroll-snap-align: start;
 }
 #section-beginners-corner .glossar .glossar__list .glossar__item:last-child {
   margin-bottom: 0;
@@ -475,20 +481,26 @@ nav #card-support {
   position: relative;
   z-index: 11;
 }
+#section-erfahrene-geniesser .expertentipps__list .expertentipps__card .content.active .preview {
+  max-height: 0;
+}
+#section-erfahrene-geniesser .expertentipps__list .expertentipps__card .content.active .preview__heading {
+  bottom: 103%;
+}
 #section-erfahrene-geniesser .expertentipps__list .expertentipps__card .content:hover .preview {
   max-height: 0;
 }
 #section-erfahrene-geniesser .expertentipps__list .expertentipps__card .content:hover .preview__heading {
-  bottom: 103%;
+  bottom: 104%;
 }
 #section-erfahrene-geniesser .expertentipps__list .expertentipps__card .content .text {
   font: var(--regFontSize);
   color: var(--softBlack);
-  padding: 20px;
+  padding: 20px 20px 40px 20px;
   border: 1px solid var(--erfahreneColor);
   border-bottom-left-radius: 20px;
   border-bottom-right-radius: 20px;
-  min-height: 175px;
+  min-height: 200px;
 }
 #section-erfahrene-geniesser .expertentipps__list .expertentipps__card .content .preview {
   z-index: 12;
@@ -516,6 +528,26 @@ nav #card-support {
   color: var(--mainBG);
   transition: all 0.3s ease;
   font-size: var(--headingFontSize);
+}
+
+#section-welt-des-kaffees {
+  color: var(--mainBG);
+}
+#section-welt-des-kaffees .divider__WDK1, #section-welt-des-kaffees .divider__WDK2 {
+  background-color: var(--weltColor);
+  display: flex;
+  justify-content: space-between;
+}
+#section-welt-des-kaffees .divider__WDK1 {
+  width: 25%;
+}
+#section-welt-des-kaffees .divider__WDK2 {
+  width: 75%;
+}
+#section-welt-des-kaffees .anbaugebiete {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--weltColor);
 }
 
 #section-shop {
@@ -571,10 +603,10 @@ nav #card-support {
   opacity: 1;
 }
 #section-shop .empfehlungen .empfehlungen__content:hover .item {
-  height: 300px;
+  height: 275px;
 }
 #section-shop .empfehlungen .empfehlungen__content:hover .item img {
-  transform: scale(0.75);
+  transform: scale(0.8);
 }
 #section-shop .empfehlungen .empfehlungen__content .item {
   display: flex;
@@ -834,7 +866,7 @@ nav #card-support {
 #section-shop .shop .shop__card .item__display img {
   -o-object-fit: contain;
      object-fit: contain;
-  width: 30vw;
+  width: 25vw;
   height: auto;
 }
 

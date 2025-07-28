@@ -86,6 +86,14 @@ document.querySelectorAll('.shop__card').forEach(shopCard =>{
     }
 })
 
+//expertentipps
+
+document.querySelectorAll('.content').forEach((el) => {
+    el.addEventListener('click', () => {
+      el.classList.toggle('active');
+    });
+  });
+
 //faq
 
 const faqItems = document.querySelectorAll('.faq__item')
