@@ -151,6 +151,8 @@ nav #card-support {
 }
 
 .small__tile {
+  position: sticky;
+  top: 0;
   height: 30px;
   width: 100%;
   border-radius: 50px;
@@ -226,6 +228,8 @@ nav #card-support {
 #section-home .divider__MA {
   background-color: var(--homeColor);
   color: var(--mainBG);
+  top: 0;
+  left: 0;
 }
 #section-home .home {
   background-color: var(--homeColor);

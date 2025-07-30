@@ -14,6 +14,69 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const tiles = document.querySelectorAll(".big__tile");
     tiles.forEach(tile => observer.observe(tile));
+
+    const tippsAudio = document.getElementById("tippsAudio");
+    const audioSection = document.getElementById("section-beginners-corner");
+    
+    tippsAudio.volume = 0;
+    tippsAudio.loop = true;
+
+    let userInteracted = false;
+
+    document.addEventListener('click', () => {
+        userInteracted = true;
+    });
+
+    const audioObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting && userInteracted) {
+                tippsAudio.play().then(() => {
+                    fadeIn(tippsAudio, 2000);
+                }).catch(error => {
+                    
+                });
+            } else if (!entry.isIntersecting) {
+                fadeOut(tippsAudio, 2000);
+            }
+        });
+    }, {
+        threshold: 0.1
+    });
+
+    function fadeIn(audio, duration) {
+        const steps = 20;
+        const stepDuration = duration / steps;
+        const volumeStep = 1 / steps;
+        
+        let currentStep = 0;
+        const fadeInterval = setInterval(() => {
+            currentStep++;
+            audio.volume = Math.min(currentStep * volumeStep, 1);
+            
+            if (currentStep >= steps) {
+                clearInterval(fadeInterval);
+            }
+        }, stepDuration);
+    }
+
+    function fadeOut(audio, duration) {
+        const steps = 20;
+        const stepDuration = duration / steps;
+        const volumeStep = audio.volume / steps;
+        
+        let currentStep = 0;
+        const fadeInterval = setInterval(() => {
+            currentStep++;
+            audio.volume = Math.max(audio.volume - volumeStep, 0);
+            
+            if (currentStep >= steps || audio.volume <= 0) {
+                clearInterval(fadeInterval);
+                audio.pause();
+            }
+        }, stepDuration);
+    }
+
+    audioObserver.observe(audioSection);
 });
 
 
