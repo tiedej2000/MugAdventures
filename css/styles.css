@@ -553,6 +553,73 @@ nav #card-support {
   flex-direction: column;
   background-color: var(--weltColor);
 }
+#section-welt-des-kaffees .kaffeeguertel {
+  color: var(--softBlack);
+  border: 1px solid var(--softBlack);
+  display: flex;
+  flex-direction: column;
+}
+#section-welt-des-kaffees .kaffeeguertel .heading {
+  font-size: var(--headingFontSize);
+  font-weight: 700;
+}
+#section-welt-des-kaffees .weltkarte_wrapper {
+  position: relative;
+}
+#section-welt-des-kaffees .weltkarte_wrapper .marker {
+  position: absolute;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+#section-welt-des-kaffees .weltkarte_wrapper .marker:hover {
+  transform: scale(1.2);
+}
+#section-welt-des-kaffees .weltkarte_wrapper .one {
+  top: 45%;
+  left: 50%;
+}
+#section-welt-des-kaffees .weltkarte_wrapper .two {
+  left: 72.5%;
+  top: 40%;
+}
+#section-welt-des-kaffees .weltkarte_wrapper .three {
+  top: 55%;
+  left: 22.5%;
+}
+#section-welt-des-kaffees .weltkarte_wrapper .description {
+  position: absolute;
+  width: 500px;
+  height: auto;
+  padding: 20px;
+  background-color: var(--weltColor);
+  color: var(--mainBG);
+  border-radius: 10px;
+  opacity: 0;
+  transition: all 0.3s ease;
+  z-index: 20;
+}
+#section-welt-des-kaffees .weltkarte_wrapper .description .heading {
+  font-size: var(--headingFontSize);
+  font-weight: 700;
+}
+#section-welt-des-kaffees .weltkarte_wrapper .description .text {
+  font-size: var(--regFontSize);
+}
+#section-welt-des-kaffees .weltkarte_wrapper .description.afrika {
+  top: 20%;
+  left: 25%;
+}
+#section-welt-des-kaffees .weltkarte_wrapper .description.asien {
+  top: 45%;
+  left: 60%;
+}
+#section-welt-des-kaffees .weltkarte_wrapper .description.amerika {
+  top: 60%;
+  left: 10%;
+}
+#section-welt-des-kaffees .weltkarte_wrapper .description.active {
+  opacity: 1;
+}
 
 #section-shop {
   color: var(--softBlack);
@@ -670,36 +737,13 @@ nav #card-support {
 #section-shop .shop .shop__card {
   border: 1px solid var(--softBlack);
   border-radius: 10px;
-  padding: 100px 40px 40px 40px;
+  padding: 40px;
   display: flex;
   flex-direction: column;
   height: 85vh;
   width: 75vw;
   flex-shrink: 0;
   position: relative;
-}
-#section-shop .shop .shop__card .categories__wrapper {
-  width: 100%;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  margin-bottom: 20px;
-  position: absolute;
-  top: 20px;
-  left: 50%;
-  transform: translateX(-50%);
-}
-#section-shop .shop .shop__card .categories__wrapper .categorie__item {
-  padding: 10px 30px;
-  border-radius: 50px;
-  border: 1px solid var(--softBlack);
-  color: var(--softBlack);
-  font-size: 0.9rem;
-  cursor: pointer;
-}
-#section-shop .shop .shop__card .categories__wrapper .active {
-  background-color: var(--softBlack);
-  color: var(--mainBG);
 }
 #section-shop .shop .shop__card .card__content {
   display: flex;

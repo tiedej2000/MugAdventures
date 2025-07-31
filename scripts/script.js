@@ -155,7 +155,23 @@ document.querySelectorAll('.content').forEach((el) => {
     el.addEventListener('click', () => {
       el.classList.toggle('active');
     });
-  });
+});
+
+// karte
+
+document.addEventListener('DOMContentLoaded', function () {
+    const weltkarteWrapper = document.querySelector('.weltkarte_wrapper');
+    const markers = weltkarteWrapper.querySelectorAll('.marker');
+    const descriptions = weltkarteWrapper.querySelectorAll('.description');
+
+    markers.forEach((marker, index) => {
+        marker.addEventListener('click', () => {
+            descriptions.forEach(desc => desc.classList.remove('active'));
+
+            descriptions[index].classList.add('active');
+        });
+    });
+});
 
 //faq
 

@@ -652,6 +652,88 @@ nav{
         flex-direction: column;
         background-color: var(--weltColor);
     }
+
+    .kaffeeguertel{
+        color: var(--softBlack);
+        border: 1px solid var(--softBlack);
+        display: flex;
+        flex-direction: column;
+
+        .heading{
+            font-size: var(--headingFontSize);
+            font-weight: 700;
+        }
+    }
+
+    .weltkarte_wrapper{
+        position: relative;
+
+        .marker{
+            position: absolute;
+            transition: all 0.3s ease;
+            cursor: pointer;
+
+            &:hover{
+                transform: scale(1.2);
+            }
+        }
+
+        .one{
+            top: 45%;
+            left: 50%;
+        }
+
+        .two{
+            left: 72.5%;
+            top: 40%;
+        }
+
+        .three{
+            top: 55%;
+            left: 22.5%;
+        }
+
+        .description{
+            position: absolute;
+            width: 500px;
+            height: auto;
+            padding: 20px;
+            background-color: var(--weltColor);
+            color: var(--mainBG);
+            border-radius: 10px;
+            opacity: 0;
+            transition: all 0.3s ease;
+            z-index: 20;
+
+            .heading{
+                font-size: var(--headingFontSize);
+                font-weight: 700
+            }
+
+            .text{
+                font-size: var(--regFontSize);
+            }
+
+            &.afrika{
+                top: 20%;
+                left: 25%;
+            }
+   
+            &.asien{
+                top: 45%;
+                left: 60%;
+            }
+
+            &.amerika{
+                top: 60%;
+                left: 10%;
+            }
+        }
+
+        .description.active{
+            opacity: 1;
+        }
+    }
 }
 
 #section-shop{
@@ -794,7 +876,7 @@ nav{
         .shop__card{
             border: 1px solid var(--softBlack);
             border-radius: 10px;
-            padding: 100px 40px 40px 40px;
+            padding: 40px;
             display: flex;
             flex-direction: column;
             height: 85vh;
@@ -802,32 +884,6 @@ nav{
             flex-shrink: 0;
             position: relative;
 
-            .categories__wrapper{
-                width: 100%;
-                display: flex;
-                gap: 20px;
-                justify-content: center;
-                margin-bottom: $mb;
-                position: absolute;
-                top: 20px;
-                left: 50%;
-                transform: translateX(-50%);
-
-
-                .categorie__item{
-                    padding: 10px 30px;
-                    border-radius: 50px;
-                    border: 1px solid var(--softBlack);
-                    color: var(--softBlack);
-                    font-size: 0.9rem;
-                    cursor: pointer;
-                }
-
-                .active{
-                    background-color: var(--softBlack);
-                    color: var(--mainBG);
-                }
-            }
 
             .card__content{
                 display: flex;
