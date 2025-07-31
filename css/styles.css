@@ -4,7 +4,6 @@
   --erfahreneColor: #656d4a;
   --weltColor: #414833;
   --shopColor: #936639;
-  --profilColor: #7f4f24;
   --supportColor: #582f0e;
   --mainBG: #faf5e4;
   --softBlack: #23211f;
@@ -73,7 +72,11 @@ nav .card:hover .card__content .card__list {
 nav .card:hover .card__list {
   padding-top: 5px;
 }
-nav .card svg {
+nav .card a {
+  width: 32px;
+  height: 32px;
+}
+nav .card a svg {
   cursor: pointer;
 }
 nav .card .card__index {

@@ -6,7 +6,6 @@
     --erfahreneColor: #656d4a;
     --weltColor: #414833;
     --shopColor: #936639;
-    --profilColor: #7f4f24;
     --supportColor: #582f0e;
 
     //main colors
@@ -92,8 +91,13 @@ nav{
             }
         }
 
-        svg{
-            cursor: pointer;
+        a{
+            width: 32px;
+            height: 32px;
+
+            svg{
+                cursor: pointer;
+            }
         }
 
         .card__index{
