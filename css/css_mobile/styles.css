@@ -88,6 +88,10 @@
     height: 25vh;
     padding-right: 0;
   }
+  #section-beginners-corner .glossar .glossar__list .glossar__item .img__wrapper img {
+    -o-object-fit: contain !important;
+       object-fit: contain !important;
+  }
   #section-beginners-corner .glossar .glossar__list .glossar__item ul {
     padding-left: 0;
   }

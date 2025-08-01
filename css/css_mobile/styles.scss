@@ -113,6 +113,10 @@
                         width: auto;
                         height: 25vh;
                         padding-right: 0;
+
+                        img{
+                            object-fit: contain !important;
+                        }
                     }
 
                     ul{
