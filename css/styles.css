@@ -156,7 +156,7 @@ nav #card-support {
 .small__tile {
   height: 30px;
   width: 100%;
-  border-radius: 50px;
+  border-radius: 10px;
   margin-bottom: 20px;
   display: flex;
   justify-content: space-between;
@@ -198,7 +198,7 @@ nav #card-support {
 #section-home .mug__adventure {
   color: var(--softBlack);
   border: 1px solid var(--softBlack);
-  padding: 35vh 20px 20px 20px;
+  padding: 50vh 20px 20px 20px;
   position: relative;
   z-index: 10;
 }
@@ -293,7 +293,7 @@ nav #card-support {
 }
 #section-beginners-corner .tipps__card .img__wrapper {
   height: 300px;
-  width: 300px;
+  width: auto;
   flex-shrink: 0;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
@@ -301,8 +301,8 @@ nav #card-support {
 #section-beginners-corner .tipps__card .img__wrapper img {
   height: 100%;
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -341,8 +341,8 @@ nav #card-support {
   border-top-right-radius: 10px;
   height: 100%;
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 #section-beginners-corner .glossar {
   display: flex;
@@ -641,7 +641,7 @@ nav #card-support {
   width: 100%;
   background-color: var(--softBlack);
   padding: 10px 20px;
-  border-radius: 50px;
+  border-radius: 10px;
   cursor: pointer;
   border: 1px solid transparent;
   transition: all 0.3s ease;

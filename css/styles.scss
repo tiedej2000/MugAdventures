@@ -193,7 +193,7 @@ nav{
 .small__tile{
     height: 30px;
     width: 100%;
-    border-radius: 50px;
+    border-radius: 10px;
     margin-bottom: $mb;
     display: flex;
     justify-content: space-between;
@@ -234,7 +234,7 @@ nav{
     .mug__adventure{
         color: var(--softBlack);
         border: 1px solid var(--softBlack);
-        padding: 35vh 20px 20px 20px;
+        padding: 50vh 20px 20px 20px;
         position: relative;
         z-index: 10;
 
@@ -342,14 +342,14 @@ nav{
 
         .img__wrapper{
             height: 300px;
-            width: 300px;
+            width: auto;
             flex-shrink: 0;
             border-top-right-radius: 10px;border-bottom-right-radius: 10px;
             
             img{
                 height: 100%;
                 width: 100%;
-                object-fit: contain;
+                object-fit: cover;
                 border-top-right-radius: 10px;border-bottom-right-radius: 10px;
             }
         }
@@ -392,7 +392,7 @@ nav{
                     border-top-right-radius: 10px;
                     height: 100%;
                     width: 100%;
-                    object-fit: cover;
+                    object-fit: contain;
                 }
             }
         }        
@@ -761,7 +761,7 @@ nav{
                 width: 100%;
                 background-color: var(--softBlack);
                 padding: 10px 20px;
-                border-radius: 50px;
+                border-radius: 10px;
                 cursor: pointer;
                 border: 1px solid transparent;
                 transition: all 0.3s ease;
