@@ -79,9 +79,13 @@
        object-fit: cover;
     height: 150px;
   }
+  #section-beginners-corner .glossar .glossar__list {
+    margin-top: 20px;
+  }
   #section-beginners-corner .glossar .glossar__list .glossar__item {
     flex-direction: column;
     height: auto;
+    margin-bottom: 60px;
   }
   #section-beginners-corner .glossar .glossar__list .glossar__item .img__wrapper {
     width: auto;

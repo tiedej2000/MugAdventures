@@ -105,9 +105,11 @@
 
         .glossar{
             .glossar__list{
+                margin-top: 20px;
                 .glossar__item{
                     flex-direction: column;
                     height: auto;
+                    margin-bottom: 60px;
 
                     .img__wrapper{
                         width: auto;
