@@ -154,8 +154,6 @@ nav #card-support {
 }
 
 .small__tile {
-  position: sticky;
-  top: 0;
   height: 30px;
   width: 100%;
   border-radius: 50px;
@@ -200,12 +198,11 @@ nav #card-support {
 #section-home .mug__adventure {
   color: var(--softBlack);
   border: 1px solid var(--softBlack);
-  padding: 40vh 20px 20px 20px;
+  padding: 35vh 20px 20px 20px;
   position: relative;
   z-index: 10;
 }
 #section-home .mug__adventure h1 {
-  font-size: 5rem;
   line-height: 1;
 }
 #section-home .mug__adventure p {
@@ -283,7 +280,6 @@ nav #card-support {
 #section-beginners-corner .tipps__card .tipps__content {
   display: flex;
   flex-direction: column;
-  gap: 10px;
   width: auto;
   justify-content: flex-end;
   padding: 20px;

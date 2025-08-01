@@ -1,10 +1,175 @@
 @media(max-width:599px){
+    $mb: 10px !important;
     nav{
         max-width: 0;
         display: none;
     }
 
     .main__wrapper{
-        margin: 20px;
+        margin: 10px;
+    }
+
+    .dividers{
+        gap: 10px;
+    }
+
+    .big__tile{
+        margin-bottom: 10px !important;
+        padding: 10px;
+    }
+
+    .small__tile{
+        margin-bottom: 10px;
+        padding: 0 15px;
+    }
+
+    .reg__tile{
+        width: 100%;
+        padding: 10px;
+    }
+
+    .tile__heading{
+        line-height: 1.2;
+    }
+
+    #section-home{
+        .mug__adventure{
+            padding: 35vh 10px 10px 10px;
+
+            p{
+                width: 100%;
+            }
+        }
+    }
+
+    #section-beginners-corner{
+        .divider__BC1, .divider__BC2{
+            width: 50%;
+        } 
+
+        .divider__BC2 span{
+            visibility: hidden;
+        }
+
+        .tipps{
+            .tipps__hero{
+                height: 200px;
+            }
+        }
+
+        .tipps__card{
+            flex-direction: column;
+            padding: 10px;
+            gap: 10px;
+
+
+            .tipps__content{
+                padding: 0;
+            }
+
+            .img__wrapper{
+                width: 100%;
+                height: auto;
+                img{
+                    border-radius: 10px;
+                    object-fit: cover;
+                    height: 150px;
+                }
+            }
+        }
+
+        .tipps__collection{
+            flex-direction: column;
+            gap: 10px;
+            margin-bottom: 10px;
+
+            .tipps__collection_card{
+                padding: 10px;
+
+                .tipps__content{
+                    margin-top: 10px;
+                    padding: 0;
+                }
+                .img__wrapper{
+                    width: 100%;
+                    height: auto;
+
+                    img{
+                        border-radius: 10px;
+                        object-fit: cover;
+                        height: 150px;
+                    }
+                }
+            }
+        }
+
+        .glossar{
+            .glossar__list{
+                .glossar__item{
+                    flex-direction: column;
+                    height: auto;
+
+                    .img__wrapper{
+                        width: auto;
+                        height: 25vh;
+                        padding-right: 0;
+                    }
+
+                    ul{
+                        padding-left: 0;
+                    }
+                }
+            }
+        }
+    }
+
+    #section-erfahrene-geniesser{
+        .divider__EG1{
+            width: 100%;
+        }
+
+        .divider__EG2{
+            width: 0%;
+            display: none;
+        }
+
+        .expertentipps__list{
+            gap: 10px;
+            .expertentipps__card{
+                width: 100%;
+
+                .content{
+                    .text{
+                        padding: 10px 10px 5vh 10px;
+                    }
+
+                    .preview__heading{
+                        padding: 0 40px;
+                        text-align: center;
+                    }
+                }
+            }
+        }
+    }
+
+    #section-welt-des-kaffees{
+        .divider__WDK1{
+            width: 100%;
+        }
+
+        .divider__WDK2{
+            width: 0%;
+            display: none;
+        }
+    }
+
+    #section-shop{
+        .divider__shop1{
+            width: 30%;
+        }
+
+        .empfehlungen{
+            flex-direction: column;
+        }
     }
 }

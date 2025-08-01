@@ -4,6 +4,124 @@
     display: none;
   }
   .main__wrapper {
-    margin: 20px;
+    margin: 10px;
+  }
+  .dividers {
+    gap: 10px;
+  }
+  .big__tile {
+    margin-bottom: 10px !important;
+    padding: 10px;
+  }
+  .small__tile {
+    margin-bottom: 10px;
+    padding: 0 15px;
+  }
+  .reg__tile {
+    width: 100%;
+    padding: 10px;
+  }
+  .tile__heading {
+    line-height: 1.2;
+  }
+  #section-home .mug__adventure {
+    padding: 35vh 10px 10px 10px;
+  }
+  #section-home .mug__adventure p {
+    width: 100%;
+  }
+  #section-beginners-corner .divider__BC1, #section-beginners-corner .divider__BC2 {
+    width: 50%;
+  }
+  #section-beginners-corner .divider__BC2 span {
+    visibility: hidden;
+  }
+  #section-beginners-corner .tipps .tipps__hero {
+    height: 200px;
+  }
+  #section-beginners-corner .tipps__card {
+    flex-direction: column;
+    padding: 10px;
+    gap: 10px;
+  }
+  #section-beginners-corner .tipps__card .tipps__content {
+    padding: 0;
+  }
+  #section-beginners-corner .tipps__card .img__wrapper {
+    width: 100%;
+    height: auto;
+  }
+  #section-beginners-corner .tipps__card .img__wrapper img {
+    border-radius: 10px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 150px;
+  }
+  #section-beginners-corner .tipps__collection {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  #section-beginners-corner .tipps__collection .tipps__collection_card {
+    padding: 10px;
+  }
+  #section-beginners-corner .tipps__collection .tipps__collection_card .tipps__content {
+    margin-top: 10px;
+    padding: 0;
+  }
+  #section-beginners-corner .tipps__collection .tipps__collection_card .img__wrapper {
+    width: 100%;
+    height: auto;
+  }
+  #section-beginners-corner .tipps__collection .tipps__collection_card .img__wrapper img {
+    border-radius: 10px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    height: 150px;
+  }
+  #section-beginners-corner .glossar .glossar__list .glossar__item {
+    flex-direction: column;
+    height: auto;
+  }
+  #section-beginners-corner .glossar .glossar__list .glossar__item .img__wrapper {
+    width: auto;
+    height: 25vh;
+    padding-right: 0;
+  }
+  #section-beginners-corner .glossar .glossar__list .glossar__item ul {
+    padding-left: 0;
+  }
+  #section-erfahrene-geniesser .divider__EG1 {
+    width: 100%;
+  }
+  #section-erfahrene-geniesser .divider__EG2 {
+    width: 0%;
+    display: none;
+  }
+  #section-erfahrene-geniesser .expertentipps__list {
+    gap: 10px;
+  }
+  #section-erfahrene-geniesser .expertentipps__list .expertentipps__card {
+    width: 100%;
+  }
+  #section-erfahrene-geniesser .expertentipps__list .expertentipps__card .content .text {
+    padding: 10px 10px 5vh 10px;
+  }
+  #section-erfahrene-geniesser .expertentipps__list .expertentipps__card .content .preview__heading {
+    padding: 0 40px;
+    text-align: center;
+  }
+  #section-welt-des-kaffees .divider__WDK1 {
+    width: 100%;
+  }
+  #section-welt-des-kaffees .divider__WDK2 {
+    width: 0%;
+    display: none;
+  }
+  #section-shop .divider__shop1 {
+    width: 30%;
+  }
+  #section-shop .empfehlungen {
+    flex-direction: column;
   }
 }/*# sourceMappingURL=styles.css.map */
