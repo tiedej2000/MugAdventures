@@ -315,51 +315,18 @@ nav{
         }
     }
 
-    .tipps__card{
-        border: 1px solid var(--softBlack);
-        color: var(--softBlack);
-        display: flex;
-        width: 100%;
-        gap: 40px;
-        padding: 0;
-
-        .tipps__content{
-           display: flex;
-           flex-direction: column;
-           width: auto;
-           justify-content: flex-end;
-           padding: 20px;
-
-           .heading{
-            font-size: clamp(1rem, 1.2vw, 2rem);
-            font-weight: 700;
-           }
-
-           .description{
-            font-size: var(--regFontSize);
-           }
-        }
-
-        .img__wrapper{
-            height: 300px;
-            width: auto;
-            flex-shrink: 0;
-            border-top-right-radius: 10px;border-bottom-right-radius: 10px;
-            
-            img{
-                height: 100%;
-                width: 100%;
-                object-fit: cover;
-                border-top-right-radius: 10px;border-bottom-right-radius: 10px;
-            }
-        }
-    }
-
     .tipps__collection{
         display: flex;
         gap: 20px;
         width: 100%;
         margin-bottom: $mb;
+        overflow-x: auto;
+        scroll-behavior: smooth;
+        scrollbar-width: none;
+        
+        &::-webkit-scrollbar {
+            display: none;
+        }
 
         .tipps__collection_card{
             display: flex;
@@ -368,7 +335,9 @@ nav{
             border: 1px solid var(--softBlack);
             height: auto;
             padding: 0;
-
+            border-radius: 10px;
+            width: 30vw;
+            flex-shrink: 0;
 
             .tipps__content{
                 padding: 10px 20px 20px 20px;
@@ -694,8 +663,8 @@ nav{
         }        
 
         .four{
-            top: 49%;
-            left: 74%;
+            top: 45%;
+            left: 75%;
         }
 
         .five{
@@ -714,6 +683,7 @@ nav{
             opacity: 0;
             transition: all 0.3s ease;
             z-index: 20;
+            pointer-events: none;
 
             .heading{
                 font-size: var(--headingFontSize);
@@ -725,8 +695,8 @@ nav{
             }
 
             &.kolumbien{
-                top: 31%;
-                left: 2%;
+                top: 20%;
+                left: 5%;
             }
    
             &.brasilien{
@@ -736,17 +706,29 @@ nav{
 
             &.indonesien{
                 top: 59%;
-                left: 33%;
+                left: 40%;
             }
 
             &.vietnam{
-                top: 25%;
-                left: 52%;
+                top: 10%;
+                left: 55%;
             }
         }
 
         .description.active{
             opacity: 1;
+        }
+    }
+
+    .bohne__zur_tasse{
+        background-color: var(--weltColor);
+        flex-direction: column;
+        color: var(--mainBG);
+    }
+
+    .step{
+        .steps__wrapper{
+
         }
     }
 }
@@ -1114,6 +1096,16 @@ nav{
 
     .support{
         background-color: var(--supportColor);
+    }
+
+    .uberuns{
+        color: var(--softBlack);
+        flex-direction: column;
+        border: 1px solid var(--softBlack);
+
+        .text{
+            font-size: var(--regFontSize);
+        }
     }
 
     .faq{
