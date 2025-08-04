@@ -574,16 +574,24 @@ nav #card-support {
   transform: scale(1.2);
 }
 #section-welt-des-kaffees .weltkarte_wrapper .one {
-  top: 45%;
-  left: 50%;
+  top: 54%;
+  left: 22%;
 }
 #section-welt-des-kaffees .weltkarte_wrapper .two {
-  left: 72.5%;
-  top: 40%;
+  left: 30%;
+  top: 62.5%;
 }
 #section-welt-des-kaffees .weltkarte_wrapper .three {
-  top: 55%;
-  left: 22.5%;
+  top: 52.5%;
+  left: 55%;
+}
+#section-welt-des-kaffees .weltkarte_wrapper .four {
+  top: 49%;
+  left: 74%;
+}
+#section-welt-des-kaffees .weltkarte_wrapper .five {
+  top: 56%;
+  left: 79%;
 }
 #section-welt-des-kaffees .weltkarte_wrapper .description {
   position: absolute;
@@ -604,17 +612,21 @@ nav #card-support {
 #section-welt-des-kaffees .weltkarte_wrapper .description .text {
   font-size: var(--regFontSize);
 }
-#section-welt-des-kaffees .weltkarte_wrapper .description.afrika {
-  top: 20%;
-  left: 25%;
+#section-welt-des-kaffees .weltkarte_wrapper .description.kolumbien {
+  top: 31%;
+  left: 2%;
 }
-#section-welt-des-kaffees .weltkarte_wrapper .description.asien {
-  top: 45%;
-  left: 60%;
+#section-welt-des-kaffees .weltkarte_wrapper .description.brasilien {
+  top: 69%;
+  left: 9%;
 }
-#section-welt-des-kaffees .weltkarte_wrapper .description.amerika {
-  top: 60%;
-  left: 10%;
+#section-welt-des-kaffees .weltkarte_wrapper .description.indonesien {
+  top: 59%;
+  left: 33%;
+}
+#section-welt-des-kaffees .weltkarte_wrapper .description.vietnam {
+  top: 25%;
+  left: 52%;
 }
 #section-welt-des-kaffees .weltkarte_wrapper .description.active {
   opacity: 1;
