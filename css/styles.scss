@@ -704,7 +704,7 @@ nav{
                 left: 9%;
             }
 
-            &.indonesien{
+            &.kenia{
                 top: 59%;
                 left: 40%;
             }
@@ -712,6 +712,11 @@ nav{
             &.vietnam{
                 top: 10%;
                 left: 55%;
+            }
+
+            &.indonesien{
+                left: 62%;
+                top: 62%;
             }
         }
 
@@ -726,8 +731,87 @@ nav{
         color: var(--mainBG);
     }
 
-    .step{
+    .steps{
         .steps__wrapper{
+            position: relative;
+            width: 100%;
+
+            .img{
+                position: absolute;
+                width: 19.5vw;
+                height: 8.125vw;
+                z-index: 12;
+                opacity: 1;
+                transition: all 0.3s ease;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    border-radius: 10px;
+                }
+
+                &:hover{
+                    opacity: 0;
+                }
+            }
+
+            .description{
+                background-color: var(--weltColor);
+                color: var(--mainBG);
+                position: absolute;
+                width: 19.5vw;
+                height: 8.125vw;
+                z-index: 10;
+                padding: 10px;
+                border-radius: 10px;
+
+                .heading{
+                    font-size: var(--regFontSize);
+                    font-weight: 700;
+                    text-align: center;
+                }
+
+                .text{
+                    font-size: clamp(0.6rem, 0.5vw, 1.2rem);
+                }
+            }
+
+            .anbau{
+                left: 6.5%;
+                top: 6.75%;
+            }
+
+            .aufbereitung{
+                left: 1%;
+                top: 74.75%;
+            }
+
+            .weiterverarbeitung{
+                left: 23.25%;
+                top: 33.675%;
+            }
+
+            .export{
+                left: 33.125%;
+                top: 67%;
+            }
+
+            .roestung{
+                left: 68%;
+                top: 78.125%;
+            }
+
+            .mahlung{
+                left: 66%;
+                top: 36%;
+            }
+
+            .genuss{
+                left: 40.375%;
+                top: 1.825%;
+            }
+
 
         }
     }
