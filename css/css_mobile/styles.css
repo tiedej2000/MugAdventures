@@ -4,7 +4,53 @@
     display: none;
   }
   .main__wrapper {
-    margin: 10px;
+    margin: 80px 10px 10px 10px;
+  }
+  #mobile-nav {
+    max-height: 70px;
+    visibility: visible;
+    overflow: visible;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    background-color: var(--mainBG);
+    width: 100%;
+    height: 70px;
+  }
+  #mobile-nav .nav-wrapper {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #mobile-nav .nav-wrapper .hamburger-btn-open {
+    display: block;
+  }
+  #mobile-nav .nav-wrapper .hamburger-btn-open svg {
+    fill: var(--softBlack);
+  }
+  #mobile-nav .nav-wrapper .hamburger-btn-open.active {
+    display: none;
+  }
+  #mobile-nav .nav-wrapper .hamburger-btn-close {
+    display: none;
+  }
+  #mobile-nav .nav-wrapper .hamburger-btn-close svg {
+    fill: var(--softBlack);
+  }
+  #mobile-nav .nav-wrapper .hamburger-btn-close.active {
+    display: block;
+  }
+  #mobile-nav .nav-wrapper .logo {
+    width: 50px;
+    height: auto;
+    display: flex;
+    gap: 10px;
+  }
+  #mobile-nav .nav-wrapper .logo img {
+    width: 100%;
+    height: 100%;
   }
   .dividers {
     gap: 10px;
@@ -39,24 +85,6 @@
   #section-beginners-corner .tipps .tipps__hero {
     height: 200px;
   }
-  #section-beginners-corner .tipps__card {
-    flex-direction: column;
-    padding: 10px;
-    gap: 10px;
-  }
-  #section-beginners-corner .tipps__card .tipps__content {
-    padding: 0;
-  }
-  #section-beginners-corner .tipps__card .img__wrapper {
-    width: 100%;
-    height: auto;
-  }
-  #section-beginners-corner .tipps__card .img__wrapper img {
-    border-radius: 10px;
-    -o-object-fit: cover;
-       object-fit: cover;
-    height: 150px;
-  }
   #section-beginners-corner .tipps__collection {
     flex-direction: column;
     gap: 10px;
@@ -64,6 +92,7 @@
   }
   #section-beginners-corner .tipps__collection .tipps__collection_card {
     padding: 10px;
+    width: 100%;
   }
   #section-beginners-corner .tipps__collection .tipps__collection_card .tipps__content {
     margin-top: 10px;
@@ -75,8 +104,8 @@
   }
   #section-beginners-corner .tipps__collection .tipps__collection_card .img__wrapper img {
     border-radius: 10px;
-    -o-object-fit: cover;
-       object-fit: cover;
+    -o-object-fit: contain;
+       object-fit: contain;
     height: 150px;
   }
   #section-beginners-corner .glossar .glossar__list .glossar__item {
@@ -105,9 +134,14 @@
   }
   #section-erfahrene-geniesser .expertentipps__list {
     gap: 10px;
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
   }
   #section-erfahrene-geniesser .expertentipps__list .expertentipps__card {
-    width: 100%;
+    width: 80%;
+    flex-shrink: 0;
   }
   #section-erfahrene-geniesser .expertentipps__list .expertentipps__card .content .text {
     padding: 10px 10px 5vh 10px;

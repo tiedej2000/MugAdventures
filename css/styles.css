@@ -139,6 +139,12 @@ nav #card-support {
   overflow: hidden;
 }
 
+#mobile-nav {
+  max-height: 0;
+  visibility: hidden;
+  overflow: hidden;
+}
+
 .big__tile {
   height: auto;
   border-radius: 10px;
@@ -274,7 +280,7 @@ nav #card-support {
   gap: 20px;
   width: 100%;
   margin-bottom: 20px;
-  overflow-x: auto;
+  overflow-x: scroll;
   scroll-behavior: smooth;
   scrollbar-width: none;
 }

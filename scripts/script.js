@@ -202,3 +202,17 @@ faqItems.forEach(item => {
 });
 
 
+//mobile nav
+
+const hamburgerOpenBtn = document.querySelector('.hamburger-btn-open')
+const hamburgerCloseBtn = document.querySelector('.hamburger-btn-close')
+
+hamburgerCloseBtn.addEventListener('click', () =>{
+    hamburgerCloseBtn.classList.toggle('active')
+    hamburgerOpenBtn.classList.toggle('active')
+})
+
+hamburgerOpenBtn.addEventListener('click', () =>{
+    hamburgerCloseBtn.classList.toggle('active')
+    hamburgerOpenBtn.classList.toggle('active')
+})

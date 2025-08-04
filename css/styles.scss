@@ -175,6 +175,12 @@ nav{
     overflow: hidden;
 }
 
+#mobile-nav{
+    max-height: 0;
+    visibility: hidden;
+    overflow: hidden;
+}
+
 .big__tile{
     height: auto;
     border-radius: 10px;
@@ -320,7 +326,7 @@ nav{
         gap: 20px;
         width: 100%;
         margin-bottom: $mb;
-        overflow-x: auto;
+        overflow-x: scroll;
         scroll-behavior: smooth;
         scrollbar-width: none;
         

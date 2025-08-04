@@ -6,7 +6,63 @@
     }
 
     .main__wrapper{
-        margin: 10px;
+        margin: 80px 10px 10px 10px;
+    }
+
+    #mobile-nav{
+        max-height: 70px;
+        visibility: visible;
+        overflow: visible;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 100000;
+        background-color: var(--mainBG);
+        width: 100%;
+        height: 70px;
+
+        .nav-wrapper{
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+
+            .hamburger-btn-open{
+                display: block;
+
+                svg{
+                    fill: var(--softBlack);
+                }
+
+                &.active{
+                    display: none;
+                }
+            }
+
+            .hamburger-btn-close{
+                display: none;
+
+                svg{
+                    fill: var(--softBlack);
+                }
+
+                &.active{
+                    display: block;
+                }
+            }
+
+            .logo{
+                width: 50px;
+                height: auto;
+                display: flex;
+                gap: 10px;
+
+                img{
+                    width: 100%;
+                    height: 100%;
+                }
+            }
+        }
     }
 
     .dividers{
@@ -57,27 +113,6 @@
             }
         }
 
-        .tipps__card{
-            flex-direction: column;
-            padding: 10px;
-            gap: 10px;
-
-
-            .tipps__content{
-                padding: 0;
-            }
-
-            .img__wrapper{
-                width: 100%;
-                height: auto;
-                img{
-                    border-radius: 10px;
-                    object-fit: cover;
-                    height: 150px;
-                }
-            }
-        }
-
         .tipps__collection{
             flex-direction: column;
             gap: 10px;
@@ -85,18 +120,20 @@
 
             .tipps__collection_card{
                 padding: 10px;
+                width: 100%;
 
                 .tipps__content{
                     margin-top: 10px;
                     padding: 0;
                 }
+
                 .img__wrapper{
                     width: 100%;
                     height: auto;
 
                     img{
                         border-radius: 10px;
-                        object-fit: cover;
+                        object-fit: contain;
                         height: 150px;
                     }
                 }
@@ -140,8 +177,14 @@
 
         .expertentipps__list{
             gap: 10px;
+            display: flex;
+            width: 100%;
+            overflow-x: scroll;
+            flex-wrap: nowrap;
+
             .expertentipps__card{
-                width: 100%;
+                width: 80%;
+                flex-shrink: 0;
 
                 .content{
                     .text{
