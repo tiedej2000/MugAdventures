@@ -15,11 +15,29 @@
   nav .card {
     min-height: 125px;
   }
+  nav .card:hover {
+    color: inherit !important;
+    background: inherit !important;
+    border: none !important;
+  }
+  nav .card:hover .card__index {
+    border-right: none !important;
+  }
+  nav .card:hover svg {
+    fill: inherit !important;
+  }
+  nav .card:hover .card__content .card__list {
+    opacity: inherit !important;
+    max-height: none !important;
+  }
+  nav .card:hover .card__list {
+    padding-top: 0 !important;
+  }
   nav .card__index {
     font-size: clamp(0.8rem, 1vw, 1.2rem);
   }
   nav .card__content .card__title {
-    font-size: clamp(0.9rem, 1.2vw, 1.3rem) !important;
+    font-size: clamp(1rem, 1.4vw, 1.5rem) !important;
   }
   nav .card__content .card__list {
     max-height: 100px !important;

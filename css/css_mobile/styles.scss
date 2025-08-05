@@ -18,13 +18,36 @@
             min-height: 125px;
         }
 
+        .card:hover {
+            color: inherit !important;
+            background: inherit !important;
+            border: none !important;
+
+            .card__index {
+                border-right: none !important;
+            }
+
+            svg {
+                fill: inherit !important;
+            }
+
+            .card__content .card__list {
+                opacity: inherit !important;
+                max-height: none !important;
+            }
+
+            .card__list {
+                padding-top: 0 !important;
+            }
+        }
+
         .card__index{
             font-size: clamp(0.8rem, 1vw, 1.2rem);
         }
 
         .card__content{
             .card__title{
-                font-size: clamp(0.9rem, 1.2vw, 1.3rem) !important;
+                font-size: clamp(1rem, 1.4vw, 1.5rem) !important;
             }
 
             .card__list{
