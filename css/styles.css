@@ -694,6 +694,11 @@ nav #card-support {
   left: 40.375%;
   top: 1.825%;
 }
+#section-welt-des-kaffees .steps_mobile {
+  display: none;
+  opacity: 0;
+  max-height: 0;
+}
 
 #section-shop {
   color: var(--softBlack);

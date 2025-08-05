@@ -157,6 +157,104 @@
     width: 0%;
     display: none;
   }
+  #section-welt-des-kaffees .weltkarte {
+    padding: 10px;
+    border: 1px solid var(--softBlack);
+  }
+  #section-welt-des-kaffees .weltkarte_wrapper {
+    padding-bottom: 24.5vh;
+  }
+  #section-welt-des-kaffees .weltkarte_wrapper .one {
+    top: 18%;
+    left: 20%;
+  }
+  #section-welt-des-kaffees .weltkarte_wrapper .two {
+    top: 24%;
+    left: 25%;
+  }
+  #section-welt-des-kaffees .weltkarte_wrapper .three {
+    top: 16%;
+    left: 49%;
+  }
+  #section-welt-des-kaffees .weltkarte_wrapper .four {
+    top: 13%;
+    left: 71%;
+  }
+  #section-welt-des-kaffees .weltkarte_wrapper .five {
+    left: 75%;
+    top: 19%;
+  }
+  #section-welt-des-kaffees .weltkarte_wrapper .description {
+    width: 100%;
+    height: calc(24.5vh - 10px);
+    padding: 10px;
+  }
+  #section-welt-des-kaffees .weltkarte_wrapper .description.kolumbien, #section-welt-des-kaffees .weltkarte_wrapper .description.brasilien, #section-welt-des-kaffees .weltkarte_wrapper .description.kenia, #section-welt-des-kaffees .weltkarte_wrapper .description.vietnam, #section-welt-des-kaffees .weltkarte_wrapper .description.indonesien {
+    top: 45%;
+    left: 0%;
+  }
+  #section-welt-des-kaffees .steps {
+    display: none;
+    max-height: none;
+    opacity: 0;
+  }
+  #section-welt-des-kaffees .steps_mobile {
+    opacity: 1;
+    display: flex;
+    height: auto;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+  }
+  #section-welt-des-kaffees .steps_mobile .wrapper {
+    position: relative;
+    width: 100%;
+  }
+  #section-welt-des-kaffees .steps_mobile .wrapper .description {
+    background-color: var(--weltColor);
+    color: var(--mainBG);
+    position: absolute;
+    width: 82.5vw;
+    height: 34vw;
+    z-index: 10;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  #section-welt-des-kaffees .steps_mobile .wrapper .description .heading {
+    font-size: var(--regFontSize);
+    font-weight: 700;
+    text-align: center;
+  }
+  #section-welt-des-kaffees .steps_mobile .wrapper .description .text {
+    font-size: clamp(0.55rem, 0.5vw, 1.2rem);
+  }
+  #section-welt-des-kaffees .steps_mobile .wrapper .anbau {
+    top: 1%;
+    left: 4%;
+  }
+  #section-welt-des-kaffees .steps_mobile .wrapper .aufbereitung {
+    left: 4%;
+    top: 15.625%;
+  }
+  #section-welt-des-kaffees .steps_mobile .wrapper .weiterverarbeitung {
+    left: 4%;
+    top: 30.25%;
+  }
+  #section-welt-des-kaffees .steps_mobile .wrapper .export {
+    left: 4%;
+    top: 44.875%;
+  }
+  #section-welt-des-kaffees .steps_mobile .wrapper .roestung {
+    left: 4%;
+    top: 59.5%;
+  }
+  #section-welt-des-kaffees .steps_mobile .wrapper .mahlung {
+    left: 4%;
+    top: 74.25%;
+  }
+  #section-welt-des-kaffees .steps_mobile .wrapper .genuss {
+    left: 4%;
+    top: 88.875%;
+  }
   #section-shop .divider__shop1 {
     width: 30%;
   }

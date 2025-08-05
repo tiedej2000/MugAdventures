@@ -828,6 +828,12 @@ nav{
 
         }
     }
+
+    .steps_mobile{
+        display: none;
+        opacity: 0;
+        max-height: 0;
+    }
 }
 
 #section-shop{

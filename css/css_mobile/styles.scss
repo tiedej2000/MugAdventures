@@ -209,6 +209,125 @@
             width: 0%;
             display: none;
         }
+
+        .weltkarte{
+            padding: 10px;
+            border: 1px solid var(--softBlack);
+        }
+
+        .weltkarte_wrapper{
+            padding-bottom: 24.5vh;
+
+            .one{
+                top: 18%;
+                left: 20%;
+            }
+
+            .two{
+                top: 24%;
+                left: 25%;
+            }
+
+            .three{
+               top: 16%; 
+               left: 49%;
+            }
+
+            .four{
+                top: 13%;
+                left: 71%;
+            }
+
+            .five{
+                left: 75%;
+                top: 19%;
+            }
+
+            .description{
+                width: 100%;
+                height: calc(24.5vh - 10px);
+                padding: 10px;
+
+                &.kolumbien, &.brasilien, &.kenia, &.vietnam, &.indonesien{
+                    top: 45%;
+                    left: 0%;
+                }
+            }
+        }
+
+        .steps{
+            display: none;
+            max-height: none;
+            opacity: 0;
+        }
+
+        .steps_mobile{
+            opacity: 1;
+            display: flex;
+            height: auto;
+            max-height: fit-content;
+
+            .wrapper{
+                position: relative;
+                width: 100%;
+
+                .description{
+                    background-color: var(--weltColor);
+                    color: var(--mainBG);
+                    position: absolute;
+                    width: 82.5vw;
+                    height: 34vw;
+                    z-index: 10;
+                    padding: 10px;
+                    border-radius: 10px;
+
+                    .heading{
+                        font-size: var(--regFontSize);
+                        font-weight: 700;
+                        text-align: center;
+                    }
+
+                    .text{
+                        font-size: clamp(0.55rem, 0.5vw, 1.2rem);
+                    }
+                }
+
+                .anbau{
+                    top: 1%;
+                    left: 4%;
+                }
+
+                .aufbereitung{
+                    left: 4%;
+                    top: 15.625%;
+                }
+
+                .weiterverarbeitung{
+                    left: 4%;
+                    top: 30.25%;
+                }
+
+                .export{
+                    left: 4%;
+                    top: 44.875%;
+                }
+
+                .roestung{
+                    left: 4%;
+                    top: 59.5%;
+                }
+
+                .mahlung{
+                    left: 4%;
+                    top: 74.25%;
+                }
+
+                .genuss{
+                    left: 4%;
+                    top: 88.875%;
+                }
+            }
+        }
     }
 
     #section-shop{
