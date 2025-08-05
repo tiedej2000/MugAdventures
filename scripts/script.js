@@ -207,12 +207,17 @@ faqItems.forEach(item => {
 const hamburgerOpenBtn = document.querySelector('.hamburger-btn-open')
 const hamburgerCloseBtn = document.querySelector('.hamburger-btn-close')
 
+const nav = document.querySelector('nav')
+
 hamburgerCloseBtn.addEventListener('click', () =>{
     hamburgerCloseBtn.classList.toggle('active')
     hamburgerOpenBtn.classList.toggle('active')
+    nav.classList.toggle('active')
 })
 
 hamburgerOpenBtn.addEventListener('click', () =>{
     hamburgerCloseBtn.classList.toggle('active')
     hamburgerOpenBtn.classList.toggle('active')
+    nav.classList.toggle('active')
 })
+

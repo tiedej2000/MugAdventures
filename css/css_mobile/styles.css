@@ -1,7 +1,33 @@
 @media (max-width: 599px) {
   nav {
-    max-width: 0;
-    display: none;
+    left: -80vw;
+    top: 0;
+    width: 80vw;
+    z-index: 10000000;
+    background-color: var(--mainBG);
+    padding: 10px;
+    gap: 10px;
+    transition: all 0.3s ease;
+  }
+  nav.active {
+    left: 0;
+  }
+  nav .card {
+    min-height: 125px;
+  }
+  nav .card__index {
+    font-size: clamp(0.8rem, 1vw, 1.2rem);
+  }
+  nav .card__content .card__title {
+    font-size: clamp(0.9rem, 1.2vw, 1.3rem) !important;
+  }
+  nav .card__content .card__list {
+    max-height: 100px !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    color: var(--mainBG) !important;
+    padding-top: 5px;
+    font-size: clamp(0.8rem, 1vw, 1.2rem) !important;
   }
   .main__wrapper {
     margin: 80px 10px 10px 10px;
