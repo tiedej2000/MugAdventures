@@ -1,4 +1,10 @@
 @media (max-width: 599px) {
+  .mute-button {
+    width: 45px;
+    height: 45px;
+    bottom: 10vh;
+    right: 30px;
+  }
   nav {
     left: -80vw;
     top: 0;
