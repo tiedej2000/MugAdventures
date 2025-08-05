@@ -17,27 +17,41 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const tippsAudio = document.getElementById("tippsAudio");
     const audioSection = document.getElementById("section-beginners-corner");
+    const muteButton = document.querySelector(".mute-button");
+    const togglePlay = document.getElementById('toggle-play');
+    const togglePause = document.getElementById('toggle-pause');
     
     tippsAudio.volume = 0;
     tippsAudio.loop = true;
 
-    let userInteracted = false;
+    let isAudioPlaying = false;
 
-    document.addEventListener('click', () => {
-        userInteracted = true;
+    // Mute button click handler
+    muteButton.addEventListener('click', () => {
+        togglePlay.classList.toggle('active')
+        togglePause.classList.toggle('active')
+        
+        if (!isAudioPlaying) {
+            tippsAudio.play().then(() => {
+                fadeIn(tippsAudio, 2000);
+                isAudioPlaying = true;
+            }).catch(error => {
+                console.log('Audio play failed:', error);
+            });
+        } else {
+            // Stop playing audio
+            fadeOut(tippsAudio, 2000);
+            isAudioPlaying = false;
+        }
     });
 
     const audioObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
-            if (entry.isIntersecting && userInteracted) {
-                tippsAudio.play().then(() => {
-                    fadeIn(tippsAudio, 2000);
-                }).catch(error => {
-                    
-                });
-            } else if (!entry.isIntersecting) {
-                fadeOut(tippsAudio, 2000);
+            if (entry.isIntersecting) {
+                // Show mute button when section is reached
+                muteButton.classList.add("active");
             }
+            // Removed the else block that was hiding the button when leaving section
         });
     }, {
         threshold: 0.1
