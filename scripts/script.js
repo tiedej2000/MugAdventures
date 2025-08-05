@@ -74,7 +74,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     function fadeOut(audio, duration) {
-        const steps = 20;
+        const steps = 30;
         const stepDuration = duration / steps;
         const volumeStep = audio.volume / steps;
         
