@@ -521,7 +521,7 @@ nav #card-support {
   bottom: 104%;
 }
 #section-erfahrene-geniesser .expertentipps__list .expertentipps__card .content .text {
-  font: var(--regFontSize);
+  font-size: var(--regFontSize);
   color: var(--softBlack);
   padding: 20px 20px 7.5vh 20px;
   border: 1px solid var(--erfahreneColor);

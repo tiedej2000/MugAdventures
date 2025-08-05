@@ -26,28 +26,6 @@
             min-height: 125px;
         }
 
-        .card:hover {
-            color: inherit !important;
-            background: inherit !important;
-            border: none !important;
-
-            .card__index {
-                border-right: none !important;
-            }
-
-            svg {
-                fill: inherit !important;
-            }
-
-            .card__content .card__list {
-                opacity: inherit !important;
-                max-height: none !important;
-            }
-
-            .card__list {
-                padding-top: 0 !important;
-            }
-        }
 
         .card__index{
             font-size: clamp(0.8rem, 1vw, 1.2rem);
@@ -253,13 +231,18 @@
 
                 .content{
                     .text{
+                        height: 30vh;
                         padding: 10px 10px 5vh 10px;
                     }
 
                     .preview__heading{
-                        padding: 0 40px;
+                        padding: 0 10px;
                         text-align: center;
                     }
+                }
+
+                .heading{
+                    padding: 20px 0;
                 }
             }
         }
@@ -281,7 +264,7 @@
         }
 
         .weltkarte_wrapper{
-            padding-bottom: 24.5vh;
+            padding-bottom: 205px;
 
             .one{
                 top: 18%;
@@ -310,7 +293,7 @@
 
             .description{
                 width: 100%;
-                height: calc(24.5vh - 10px);
+                height: 195px;
                 padding: 10px;
 
                 &.kolumbien, &.brasilien, &.kenia, &.vietnam, &.indonesien{
