@@ -346,16 +346,11 @@ nav{
         padding: 50vh 20px 20px 20px;
         position: relative;
         z-index: 10;
+        display: flex;
 
         h1{
             line-height: 1;
             font-size: clamp(3rem, 10vw, 7rem);
-        }
-
-        p{
-            width: 80%;
-            font-size: clamp(0.9rem, 1vw, 1.2rem);
-            line-height: 1.2;
         }
 
         .video__wrapper{
@@ -754,6 +749,10 @@ nav{
         }
     }
 
+    .weltkarte{
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    }
+
     .weltkarte_wrapper{
         position: relative;
 
@@ -863,6 +862,7 @@ nav{
     }
 
     .steps{
+        box-shadow: 0 0 0 rgba(0, 0, 0, 0);
         .steps__wrapper{
             position: relative;
             width: 100%;

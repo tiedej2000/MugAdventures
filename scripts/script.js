@@ -310,16 +310,20 @@ const hamburgerCloseBtn = document.querySelector('.hamburger-btn-close')
 
 const nav = document.querySelector('nav')
 
+const mobileNav = document.querySelector('#mobile-nav')
+
 hamburgerCloseBtn.addEventListener('click', () =>{
     hamburgerCloseBtn.classList.toggle('active')
     hamburgerOpenBtn.classList.toggle('active')
     nav.classList.toggle('active')
+    mobileNav.classList.toggle('active')
 })
 
 hamburgerOpenBtn.addEventListener('click', () =>{
     hamburgerCloseBtn.classList.toggle('active')
     hamburgerOpenBtn.classList.toggle('active')
     nav.classList.toggle('active')
+    mobileNav.classList.toggle('active')
 })
 
 const navLinks = document.querySelectorAll('nav a')

@@ -300,15 +300,11 @@ nav #card-support {
   padding: 50vh 20px 20px 20px;
   position: relative;
   z-index: 10;
+  display: flex;
 }
 #section-home .mug__adventure h1 {
   line-height: 1;
   font-size: clamp(3rem, 10vw, 7rem);
-}
-#section-home .mug__adventure p {
-  width: 80%;
-  font-size: clamp(0.9rem, 1vw, 1.2rem);
-  line-height: 1.2;
 }
 #section-home .mug__adventure .video__wrapper {
   position: absolute;
@@ -644,6 +640,9 @@ nav #card-support {
   font-size: var(--headingFontSize);
   font-weight: 700;
 }
+#section-welt-des-kaffees .weltkarte {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+}
 #section-welt-des-kaffees .weltkarte_wrapper {
   position: relative;
 }
@@ -731,6 +730,9 @@ nav #card-support {
 }
 #section-welt-des-kaffees .bohne__zur_tasse_text .heading {
   font-size: var(--headingFontSize);
+}
+#section-welt-des-kaffees .steps {
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
 #section-welt-des-kaffees .steps .steps__wrapper {
   position: relative;
