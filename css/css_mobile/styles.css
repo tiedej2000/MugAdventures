@@ -306,10 +306,10 @@
     height: auto;
   }
   #section-shop .empfehlungen .reg__tile .empfehlungen__content .item {
-    height: 200px;
+    height: 300px;
   }
   #section-shop .empfehlungen .reg__tile .empfehlungen__content .item img {
-    width: 60%;
+    width: 75%;
     padding: 20px;
   }
   #section-shop .empfehlungen .reg__tile .empfehlungen__content .description {
