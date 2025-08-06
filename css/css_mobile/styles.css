@@ -100,7 +100,10 @@
     padding: 10px;
   }
   .tile__heading {
-    line-height: 1.2;
+    line-height: 1;
+  }
+  .tile__subheading {
+    padding-top: 5px;
   }
   #section-home .mug__adventure {
     padding: 35vh 10px 10px 10px;

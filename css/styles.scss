@@ -272,11 +272,12 @@ nav{
 
 .tile__heading{
     font-size: clamp(2rem, 4vw, 6rem);
-    line-height: 1.4;
+    line-height: 1;
     font-weight: 700;
 }
 
 .tile__subheading{
+    padding-top: 10px;
     font-size: clamp(0.8rem, 1vw, 1.6rem);
     font-weight: 400;
 }
@@ -297,6 +298,7 @@ nav{
 
         h1{
             line-height: 1;
+            font-size: clamp(3rem, 10vw, 7rem);
         }
 
         p{
@@ -796,6 +798,16 @@ nav{
         color: var(--mainBG);
     }
 
+    .bohne__zur_tasse_text{
+        border: 1px solid var(--softBlack);
+        color: var(--softBlack);
+        font-weight: 700;
+
+        .heading{
+            font-size: var(--headingFontSize);
+        }
+    }
+
     .steps{
         .steps__wrapper{
             position: relative;
@@ -1259,6 +1271,7 @@ nav{
         border: 1px solid var(--softBlack);
 
         .text{
+            padding-top: 10px;
             font-size: var(--regFontSize);
         }
     }
@@ -1268,7 +1281,7 @@ nav{
         flex-direction: column;
         width: 100%;
         height: auto;
-        justify-content: center; align-items: center;
+        justify-content: center; 
         color: var(--softBlack);
         border: 1px solid var(--softBlack);
         font-size: clamp(1rem, 0.9vw, 1.4rem);
@@ -1277,12 +1290,13 @@ nav{
             display: flex;
             flex-direction: column;
             justify-content: center; align-items: center;
-            padding: 10px;
             width: 100%;
+            padding: 10px 0px;
 
             .heading{
                 font-size: var(--headingFontSize);
                 font-weight: 700;
+                padding-bottom: 10px;
             }
 
             .faq__question{
