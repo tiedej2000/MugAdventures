@@ -157,7 +157,7 @@ nav #card-support {
   display: flex;
   justify-content: center;
   align-items: center;
-  bottom: 30px;
+  bottom: 80px;
   right: 30px;
   transform: translateY(40px);
   opacity: 0;
@@ -190,8 +190,8 @@ nav #card-support {
 }
 
 .cart-button {
-  opacity: 0;
-  bottom: 130px;
+  opacity: 1;
+  bottom: 60px;
 }
 
 .pop-up-cart {
@@ -275,6 +275,7 @@ nav #card-support {
   font-size: clamp(2rem, 4vw, 6rem);
   line-height: 1;
   font-weight: 700;
+  font-family: "Libre Baskerville", serif !important;
 }
 
 .tile__subheading {
@@ -799,6 +800,23 @@ nav #card-support {
   opacity: 0;
   max-height: 0;
 }
+#section-welt-des-kaffees .unvertraeglichkeiten {
+  background-color: var(--weltColor);
+}
+#section-welt-des-kaffees .unvertraeglichkeiten__list {
+  flex-direction: column;
+  color: var(--softBlack);
+  border: 1px solid var(--softBlack);
+}
+#section-welt-des-kaffees .unvertraeglichkeiten__list .heading {
+  font-size: var(--headingFontSize);
+  font-weight: 700;
+  margin-bottom: 5px;
+}
+#section-welt-des-kaffees .unvertraeglichkeiten__list .text {
+  font-size: var(--regFontSize);
+  margin-bottom: 40px;
+}
 
 #section-shop {
   color: var(--softBlack);
@@ -916,7 +934,7 @@ nav #card-support {
 #section-shop .shop .shop__card {
   border: 1px solid var(--softBlack);
   border-radius: 10px;
-  padding: 40px;
+  padding: 20px;
   display: flex;
   flex-direction: column;
   height: 85vh;
@@ -1178,7 +1196,7 @@ nav #card-support {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 1;
+  opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
 }
