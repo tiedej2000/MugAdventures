@@ -309,7 +309,8 @@
     height: 200px;
   }
   #section-shop .empfehlungen .reg__tile .empfehlungen__content .item img {
-    width: 50%;
+    width: 60%;
+    padding: 20px;
   }
   #section-shop .empfehlungen .reg__tile .empfehlungen__content .description {
     max-height: -moz-fit-content;
