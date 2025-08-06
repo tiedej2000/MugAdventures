@@ -319,6 +319,7 @@
   #section-shop .shop .shop__card {
     padding: 10px;
     width: 100%;
+    height: 650px;
   }
   #section-shop .shop .shop__card .card__content {
     flex-direction: column;
@@ -365,7 +366,7 @@
     height: 65%;
   }
   #section-shop .shop .shop__card .card__content .item__display img {
-    width: 55vw;
+    width: 50vw;
   }
   #section-kundenservice .faq {
     padding: 10px;
