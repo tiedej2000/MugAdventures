@@ -1,6 +1,15 @@
 // observer for tiles // loading adds animation
 
 document.addEventListener("DOMContentLoaded", function () {
+    //hide animation after 5s
+    const loader = document.querySelector('.loader');
+
+    setTimeout(() => {
+        loader.classList.add('hide');
+    }, 4500); 
+
+
+    //give tiles show class when intersecting
     const observer = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
@@ -311,3 +320,19 @@ navLinks.forEach(link =>{
         hamburgerCloseBtn.classList.toggle('active')
     })
 })
+
+// loader animation
+
+const riveInstance = new rive.Rive({
+  src: '/media/mocca_coffee_pot (500x500).riv',
+  canvas: document.getElementById('rive-canvas'),
+  autoplay: true,
+  stateMachines: "State Machine 1",
+  onLoad: () => {
+    console.log('Rive animation loaded!');
+  },
+});
+
+
+
+

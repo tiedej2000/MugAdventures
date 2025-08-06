@@ -193,7 +193,7 @@ nav{
     display: flex;
     justify-content: center;
     align-items: center;
-    bottom: 80px;
+    bottom: 30px;
     right: 30px;
     transform: translateY(40px);
     opacity: 0;
@@ -233,51 +233,8 @@ nav{
 }
 
 .cart-button{
-    opacity: 1;
-    bottom: 60px;
-}
-
-.pop-up-cart{
-    width: 350px;
-    background-color: var(--mainBG);
-    color: var(--softBlack);
-    height: 110px;
-    box-shadow: 0 0 7px rgba(0,0,0,0.3);
-    position: fixed;
-    bottom: 20px;
-    right: 100px;
-    border-radius: 10px;
-    padding: 10px;
-    display: flex;
-    gap: 20px;
-    transform: translateY(40px);
     opacity: 0;
-    transition: all 0.3s ease;
-    pointer-events: none;
-
-    &.active{
-        opacity: 1;
-        transform: translateY(0px);
-    }
-
-    .img__container{
-        height: 100%;
-        width: auto;
-
-        img{
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
-        }
-    }
-
-    .text__container{
-        display: flex;
-        gap: 5px;
-        flex-direction: column;
-        justify-content: center;
-        font-size: var(--regFontSize);
-    }
+    bottom: 130px;
 }
 
 .big__tile{
@@ -1088,7 +1045,7 @@ nav{
         .shop__card{
             border: 1px solid var(--softBlack);
             border-radius: 10px;
-            padding: 20px;
+            padding: 40px;
             display: flex;
             flex-direction: column;
             height: 85vh;
@@ -1196,7 +1153,7 @@ nav{
                         .amount__btn_custom{
                             border: 1px solid var(--softBlack);
                             color: var(--softBlack);
-                            border-radius: 10px;
+                            border-radius: 50px;
                             padding: 0px 20px;
                             display: flex;
                             align-items: center;
@@ -1215,7 +1172,7 @@ nav{
                             width: 100%;
                             height: auto;
                             background-color: var(--softBlack);
-                            border-radius: 10px;
+                            border-radius: 50px;
                             border: 1px solid var(--softBlack);
                             cursor: pointer;
                             transition: all 0.3s ease;
@@ -1379,3 +1336,28 @@ nav{
         }
     }
 }
+
+.loader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: var(--mainBG);
+    z-index: 999999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 1;
+    pointer-events: none;
+    transition: all 0.3s ease;
+
+    &.hide{
+        opacity: 0;
+    }
+
+    #rive-canvas {
+        display: block;
+    }
+}
+
