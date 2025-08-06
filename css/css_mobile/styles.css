@@ -396,4 +396,8 @@
   #section-kundenservice .faq .faq__item .faq__answer.active {
     max-height: 140px;
   }
+  #rive-canvas {
+    width: 300px;
+    height: 300px;
+  }
 }/*# sourceMappingURL=styles.css.map */
