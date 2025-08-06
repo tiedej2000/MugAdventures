@@ -102,12 +102,16 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const container = document.querySelector('.tipps__collection');
 
-  container.addEventListener('wheel', (e) => {
-    if (e.deltaY !== 0) {
-      e.preventDefault(); 
-      container.scrollLeft += e.deltaY * 2; 
-    }
-  }, { passive: false });
+  const isDesktop = window.matchMedia("(min-width: 768px)").matches;
+
+  if (isDesktop && container) {
+    container.addEventListener('wheel', (e) => {
+      if (e.deltaY !== 0) {
+        e.preventDefault();
+        container.scrollLeft += e.deltaY * 2; 
+      }
+    }, { passive: false });
+  }
 
 //shop kaffee content
 
