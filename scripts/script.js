@@ -26,7 +26,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     let isAudioPlaying = false;
 
-    // Mute button click handler
     muteButton.addEventListener('click', () => {
         togglePlay.classList.toggle('active')
         togglePause.classList.toggle('active')
@@ -39,7 +38,6 @@ document.addEventListener("DOMContentLoaded", function () {
                 console.log('Audio play failed:', error);
             });
         } else {
-            // Stop playing audio
             fadeOut(tippsAudio, 2000);
             isAudioPlaying = false;
         }
@@ -48,10 +46,8 @@ document.addEventListener("DOMContentLoaded", function () {
     const audioObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                // Show mute button when section is reached
                 muteButton.classList.add("active");
             }
-            // Removed the else block that was hiding the button when leaving section
         });
     }, {
         threshold: 0.1
@@ -93,7 +89,6 @@ document.addEventListener("DOMContentLoaded", function () {
     audioObserver.observe(audioSection);
 });
 
-
 //shop kaffee content
 
 const coffeeSets = {
@@ -134,6 +129,8 @@ const coffeeSets = {
     }
 };
 
+// shop cart function
+
 document.querySelectorAll('.shop__card').forEach(shopCard =>{
     const cardId = shopCard.id
     const itemDisplayImg = shopCard.querySelector('.item__display img')
@@ -161,7 +158,79 @@ document.querySelectorAll('.shop__card').forEach(shopCard =>{
             itemDisplayImg.src = coffeeSets[cardId][`img${currIndex}`];
         })
     }
+
+    const amountBtns = shopCard.querySelectorAll('.amount__btn');
+    const customInput = shopCard.querySelector('.amount__btn_custom');
+    
+    amountBtns.forEach(btn => {
+        btn.addEventListener('click', () => {
+            amountBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+            if (customInput) {
+                customInput.value = '';
+            }
+        });
+    });
+    
+    if (customInput) {
+        customInput.addEventListener('input', () => {
+            if (customInput.value.trim() !== '') {
+                amountBtns.forEach(b => b.classList.remove('active'));
+            }
+        });
+    }
+
+    const cartBtn = shopCard.querySelector('.cart__btn');
+    cartBtn.addEventListener('click', () => {
+        const coffeeName = shopCard.querySelector('.coffee__info .header').textContent;
+        const coffeeImgSrc = itemDisplayImg.src;
+        const coffeePrice = shopCard.querySelector('.price li').textContent;
+        let selectedAmount = '1';
+        const activeAmountBtn = shopCard.querySelector('.amount__btn.active');
+        if (activeAmountBtn) {
+            selectedAmount = activeAmountBtn.textContent;
+        } else if (customInput && customInput.value.trim() !== '') {
+            selectedAmount = customInput.value.trim();
+        }
+        const popUpCart = document.querySelector('.pop-up-cart');
+        const popUpImg = popUpCart.querySelector('.img__container img');
+        const popUpTitle = popUpCart.querySelector('.item');
+        const popUpPrice = popUpCart.querySelector('.price');
+        popUpImg.src = coffeeImgSrc;
+        popUpTitle.textContent = `${selectedAmount}x ${coffeeName}`;
+        popUpPrice.textContent = coffeePrice;
+        popUpCart.classList.add('active');
+        clearTimeout(popUpCart._hideTimeout);
+        popUpCart._hideTimeout = setTimeout(() => {
+            popUpCart.classList.remove('active');
+        }, 3000);
+    });
 })
+
+//empfehlungen buy buttons
+
+document.querySelectorAll('.empfehlungen .buy__btn').forEach(buyBtn => {
+    buyBtn.addEventListener('click', () => {
+        const empfehlungenTile = buyBtn.closest('.reg__tile');
+        const coffeeName = empfehlungenTile.querySelector('.header__content .header').textContent;
+        const coffeeImgSrc = empfehlungenTile.querySelector('.item img').src;
+        const coffeePrice = empfehlungenTile.querySelector('.header__content .price').textContent;
+        
+        const popUpCart = document.querySelector('.pop-up-cart');
+        const popUpImg = popUpCart.querySelector('.img__container img');
+        const popUpTitle = popUpCart.querySelector('.item');
+        const popUpPrice = popUpCart.querySelector('.price');
+        
+        popUpImg.src = coffeeImgSrc;
+        popUpTitle.textContent = `1x ${coffeeName}`;
+        popUpPrice.textContent = coffeePrice;
+        popUpCart.classList.add('active');
+        clearTimeout(popUpCart._hideTimeout);
+        popUpCart._hideTimeout = setTimeout(() => {
+            popUpCart.classList.remove('active');
+        }, 3000);
+    });
+});
 
 //expertentipps
 
@@ -181,7 +250,6 @@ document.addEventListener('DOMContentLoaded', function () {
     markers.forEach((marker, index) => {
         marker.addEventListener('click', () => {
             descriptions.forEach(desc => desc.classList.remove('active'));
-
             descriptions[index].classList.add('active');
         });
     });
@@ -214,7 +282,6 @@ faqItems.forEach(item => {
         }
     })
 });
-
 
 //mobile nav
 

@@ -1,13 +1,23 @@
 @media(max-width:599px){
     $mb: 10px !important;
 
-    .mute-button{
+    .mute-button, .cart-button{
         width: 45px;
         height: 45px;
 
-        bottom: 5vh;
+        bottom: 9vh;
         right: 30px;
     }
+
+    .cart-button{
+        bottom: 7vh;
+    }
+
+    .pop-up-cart{
+        width: 70vw;
+    }
+
+    
     nav{
         left: -80vw;
         top: 0;
