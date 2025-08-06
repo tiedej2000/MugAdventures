@@ -746,8 +746,8 @@ nav #card-support {
 }
 #section-welt-des-kaffees .steps .steps__wrapper .img {
   position: absolute;
-  width: 19.5vw;
-  height: 8.125vw;
+  width: 20vw;
+  height: 11.125vw;
   z-index: 12;
   opacity: 1;
   transition: all 0.3s ease;
@@ -757,7 +757,8 @@ nav #card-support {
   height: 100%;
   -o-object-fit: cover;
      object-fit: cover;
-  border-radius: 10px;
+  border-radius: 15px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 #section-welt-des-kaffees .steps .steps__wrapper .img:hover {
   opacity: 0;
@@ -766,11 +767,12 @@ nav #card-support {
   background-color: var(--weltColor);
   color: var(--mainBG);
   position: absolute;
-  width: 19.5vw;
-  height: 8.125vw;
+  width: 20vw;
+  height: 11.125vw;
   z-index: 10;
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 15px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
 }
 #section-welt-des-kaffees .steps .steps__wrapper .description .heading {
   font-size: var(--regFontSize);
@@ -778,35 +780,35 @@ nav #card-support {
   text-align: center;
 }
 #section-welt-des-kaffees .steps .steps__wrapper .description .text {
-  font-size: clamp(0.6rem, 0.5vw, 1.2rem);
+  font-size: clamp(0.6rem, 0.7vw, 1.2rem);
 }
 #section-welt-des-kaffees .steps .steps__wrapper .anbau {
-  left: 6.5%;
-  top: 6.75%;
+  left: 6.25%;
+  top: 0.75%;
 }
 #section-welt-des-kaffees .steps .steps__wrapper .aufbereitung {
-  left: 1%;
-  top: 74.75%;
+  left: 0.625%;
+  top: 75%;
 }
 #section-welt-des-kaffees .steps .steps__wrapper .weiterverarbeitung {
-  left: 23.25%;
-  top: 33.675%;
+  left: 23.125%;
+  top: 35.675%;
 }
 #section-welt-des-kaffees .steps .steps__wrapper .export {
   left: 33.125%;
-  top: 67%;
+  top: 71.5%;
 }
 #section-welt-des-kaffees .steps .steps__wrapper .roestung {
-  left: 68%;
-  top: 78.125%;
+  left: 68.5%;
+  top: 75.125%;
 }
 #section-welt-des-kaffees .steps .steps__wrapper .mahlung {
-  left: 66%;
-  top: 36%;
+  left: 66.5%;
+  top: 37.375%;
 }
 #section-welt-des-kaffees .steps .steps__wrapper .genuss {
-  left: 40.375%;
-  top: 1.825%;
+  left: 49.375%;
+  top: 0.75%;
 }
 #section-welt-des-kaffees .steps_mobile {
   display: none;
@@ -1209,7 +1211,7 @@ nav #card-support {
   display: flex;
   align-items: center;
   justify-content: center;
-  opacity: 1;
+  opacity: 0;
   pointer-events: none;
   transition: all 0.3s ease;
 }
