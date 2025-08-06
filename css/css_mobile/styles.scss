@@ -490,6 +490,10 @@
 
                 .faq__answer{
                     padding-right: 10%;
+
+                    &.active{
+                        max-height: 140px;
+                    }
                 }
             }
         }

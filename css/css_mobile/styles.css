@@ -377,4 +377,7 @@
   #section-kundenservice .faq .faq__item .faq__answer {
     padding-right: 10%;
   }
+  #section-kundenservice .faq .faq__item .faq__answer.active {
+    max-height: 140px;
+  }
 }/*# sourceMappingURL=styles.css.map */
