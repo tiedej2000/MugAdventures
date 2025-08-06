@@ -916,6 +916,18 @@ nav{
                 .text{
                     font-size: clamp(0.6rem, 0.7vw, 1.2rem);
                 }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -10px;
+                    left: -10px;
+                    width: calc(100% + 20px);
+                    height: calc(100% + 20px);
+                    border: 2px solid var(--softBlack); // or any color you like
+                    border-radius: 20px; // slightly larger than original for offset look
+                    z-index: -1; // behind the .description box
+                }
             }
 
             .anbau{
@@ -945,15 +957,13 @@ nav{
 
             .mahlung{
                 left: 66.5%;
-                top: 37.375%;
+                top: 37.374%;
             }
 
             .genuss{
                 left: 49.375%;
                 top: 0.75%;
             }
-
-
         }
     }
 

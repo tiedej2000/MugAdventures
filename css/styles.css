@@ -782,6 +782,17 @@ nav #card-support {
 #section-welt-des-kaffees .steps .steps__wrapper .description .text {
   font-size: clamp(0.6rem, 0.7vw, 1.2rem);
 }
+#section-welt-des-kaffees .steps .steps__wrapper .description::before {
+  content: "";
+  position: absolute;
+  top: -10px;
+  left: -10px;
+  width: calc(100% + 20px);
+  height: calc(100% + 20px);
+  border: 2px solid var(--softBlack);
+  border-radius: 20px;
+  z-index: -1;
+}
 #section-welt-des-kaffees .steps .steps__wrapper .anbau {
   left: 6.25%;
   top: 0.75%;
@@ -804,7 +815,7 @@ nav #card-support {
 }
 #section-welt-des-kaffees .steps .steps__wrapper .mahlung {
   left: 66.5%;
-  top: 37.375%;
+  top: 37.374%;
 }
 #section-welt-des-kaffees .steps .steps__wrapper .genuss {
   left: 49.375%;

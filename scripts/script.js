@@ -356,35 +356,7 @@ const riveInstance = new rive.Rive({
 
 // delete hover effects
 
-function hasTouch() {
-  return 'ontouchstart' in window
-    || navigator.maxTouchPoints > 0
-    || navigator.msMaxTouchPoints > 0;
-}
 
-if (hasTouch()) {
-  try {
-    for (const sheet of document.styleSheets) {
-      // Some sheets may not be accessible (CORS), skip them
-      try {
-        const rules = sheet.cssRules || sheet.rules;
-        if (!rules) continue;
-
-        for (let i = rules.length - 1; i >= 0; i--) {
-          const rule = rules[i];
-          if (rule.selectorText && rule.selectorText.includes(':hover')) {
-            sheet.deleteRule(i);
-          }
-        }
-      } catch (e) {
-        // silently ignore CORS-restricted stylesheets
-        continue;
-      }
-    }
-  } catch (ex) {
-    console.warn('Failed to remove :hover styles:', ex);
-  }
-}
 
 
 
