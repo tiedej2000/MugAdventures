@@ -894,6 +894,19 @@ nav{
                 &:hover{
                     opacity: 0;
                 }
+
+                &::before {
+                    content: "";
+                    position: absolute;
+                    top: -10px;
+                    left: -10px;
+                    background-color: var(--mainBG);
+                    width: calc(100% + 20px);
+                    height: calc(100% + 20px);
+                    border: 2px solid var(--softBlack); // or any color you like
+                    border-radius: 20px; // slightly larger than original for offset look
+                    z-index: -2; // behind the .description box
+                }
             }
 
             .description{
@@ -906,6 +919,7 @@ nav{
                 padding: 10px;
                 border-radius: 15px;
                 box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2);
+                z-index: 2;
 
                 .heading{
                     font-size: var(--regFontSize);
@@ -915,19 +929,6 @@ nav{
 
                 .text{
                     font-size: clamp(0.6rem, 0.7vw, 1.2rem);
-                }
-
-                &::before {
-                    content: "";
-                    position: absolute;
-                    top: -10px;
-                    left: -10px;
-                    background-color: var(--mainBG);
-                    width: calc(100% + 20px);
-                    height: calc(100% + 20px);
-                    border: 2px solid var(--softBlack); // or any color you like
-                    border-radius: 20px; // slightly larger than original for offset look
-                    z-index: -1; // behind the .description box
                 }
             }
 

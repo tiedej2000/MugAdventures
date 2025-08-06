@@ -261,51 +261,65 @@
     position: relative;
     width: 100%;
   }
+  #section-welt-des-kaffees .steps_mobile .wrapper img {
+    opacity: 0;
+  }
   #section-welt-des-kaffees .steps_mobile .wrapper .description {
     background-color: var(--weltColor);
     color: var(--mainBG);
     position: absolute;
-    width: 82.5vw;
-    height: 34vw;
+    width: 84vw;
+    height: 46vw;
     z-index: 10;
     padding: 10px;
     border-radius: 10px;
   }
   #section-welt-des-kaffees .steps_mobile .wrapper .description .heading {
-    font-size: var(--regFontSize);
+    font-size: var(--headingFontSize);
     font-weight: 700;
     text-align: center;
   }
   #section-welt-des-kaffees .steps_mobile .wrapper .description .text {
-    font-size: clamp(0.55rem, 0.5vw, 1.2rem);
+    font-size: clamp(0.55rem, 2.85vw, 1.2rem);
+  }
+  #section-welt-des-kaffees .steps_mobile .wrapper .description::before {
+    content: "";
+    position: absolute;
+    top: -10px;
+    left: -10px;
+    width: calc(100% + 20px);
+    height: calc(100% + 20px);
+    border: 2px solid var(--softBlack);
+    border-radius: 20px;
+    z-index: -2;
   }
   #section-welt-des-kaffees .steps_mobile .wrapper .anbau {
     top: 1%;
-    left: 4%;
+    left: 2.75%;
   }
   #section-welt-des-kaffees .steps_mobile .wrapper .aufbereitung {
-    left: 4%;
-    top: 15.625%;
+    left: 2.75%;
+    top: 15.375%;
   }
   #section-welt-des-kaffees .steps_mobile .wrapper .weiterverarbeitung {
-    left: 4%;
-    top: 30.25%;
+    left: 2.75%;
+    top: 29.625%;
   }
   #section-welt-des-kaffees .steps_mobile .wrapper .export {
-    left: 4%;
-    top: 44.875%;
+    left: 2.75%;
+    top: 43.875%;
   }
   #section-welt-des-kaffees .steps_mobile .wrapper .roestung {
-    left: 4%;
-    top: 59.5%;
+    left: 2.75%;
+    top: 58.25%;
   }
   #section-welt-des-kaffees .steps_mobile .wrapper .mahlung {
-    left: 4%;
-    top: 74.25%;
+    left: 2.75%;
+    top: 72.5%;
   }
   #section-welt-des-kaffees .steps_mobile .wrapper .genuss {
-    left: 4%;
-    top: 88.875%;
+    left: 2.75%;
+    top: 86.875%;
   }
   #section-shop .divider__shop1 {
     width: 30%;
