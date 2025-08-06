@@ -98,6 +98,17 @@ document.addEventListener("DOMContentLoaded", function () {
     audioObserver.observe(audioSection);
 });
 
+// make tipps scrollable
+
+  const container = document.querySelector('.tipps__collection');
+
+  container.addEventListener('wheel', (e) => {
+    if (e.deltaY !== 0) {
+      e.preventDefault(); 
+      container.scrollLeft += e.deltaY * 2; 
+    }
+  }, { passive: false });
+
 //shop kaffee content
 
 const coffeeSets = {
