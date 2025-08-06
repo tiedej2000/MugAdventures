@@ -408,6 +408,7 @@
         .empfehlungen{
             flex-direction: column;
             gap: 10px;
+            margin-bottom: 10px;
 
             .reg__tile{
                 height: auto;
@@ -432,6 +433,7 @@
         }
 
         .shop{
+            margin-bottom: 10px;
             .shop__card{
                 padding: 10px;
                 width: 100%;
