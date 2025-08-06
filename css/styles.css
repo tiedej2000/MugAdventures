@@ -242,6 +242,7 @@ nav #card-support {
   transition: all 0.3s ease;
   margin-bottom: 20px;
   padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
 }
 .big__tile.show {
   opacity: 1;
@@ -259,6 +260,7 @@ nav #card-support {
   padding: 0px 20px;
   font-weight: 600;
   font-size: clamp(0.6rem, 0.8vw, 1.2rem);
+  box-shadow: 0 0px 5px rgba(0, 0, 0, 0.2);
 }
 
 .reg__tile {
@@ -543,6 +545,8 @@ nav #card-support {
   width: calc((100% - 60px) / 4);
   position: relative;
   cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
 }
 #section-erfahrene-geniesser .expertentipps__list .expertentipps__card .heading {
   background-color: var(--erfahreneColor);
@@ -683,6 +687,7 @@ nav #card-support {
   transition: all 0.3s ease;
   z-index: 20;
   pointer-events: none;
+  box-shadow: 0 1px 8px rgba(0, 0, 0, 0.2);
 }
 #section-welt-des-kaffees .weltkarte_wrapper .description .heading {
   font-size: var(--headingFontSize);
