@@ -1,0 +1,399 @@
+@media (max-width: 599px) {
+  .mute-button, .cart-button {
+    width: 45px;
+    height: 45px;
+    bottom: 9vh;
+    right: 30px;
+  }
+  .cart-button {
+    bottom: 7vh;
+  }
+  .pop-up-cart {
+    width: 70vw;
+  }
+  nav {
+    left: -80vw;
+    top: 0;
+    width: 75vw;
+    z-index: 200000;
+    background-color: var(--mainBG);
+    padding: 10px;
+    gap: 10px;
+    transition: all 0.3s ease;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+  }
+  nav.active {
+    left: 0;
+  }
+  nav .card {
+    min-height: 125px;
+  }
+  nav .card__index {
+    font-size: clamp(0.8rem, 1vw, 1.2rem);
+  }
+  nav .card__content .card__title {
+    font-size: clamp(1rem, 1.4vw, 1.5rem) !important;
+  }
+  nav .card__content .card__list {
+    max-height: 100px !important;
+    opacity: 1 !important;
+    overflow: visible !important;
+    color: var(--mainBG) !important;
+    padding-top: 5px;
+    font-size: clamp(0.8rem, 1vw, 1.2rem) !important;
+  }
+  .main__wrapper {
+    margin: 80px 10px 10px 10px;
+  }
+  #mobile-nav {
+    max-height: 70px;
+    visibility: visible;
+    overflow: visible;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100000;
+    background-color: var(--mainBG);
+    width: 100%;
+    height: 70px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+  }
+  #mobile-nav.active {
+    box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  }
+  #mobile-nav .nav-wrapper {
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  #mobile-nav .nav-wrapper .hamburger-btn-open {
+    display: block;
+  }
+  #mobile-nav .nav-wrapper .hamburger-btn-open svg {
+    fill: var(--softBlack);
+  }
+  #mobile-nav .nav-wrapper .hamburger-btn-open.active {
+    display: none;
+  }
+  #mobile-nav .nav-wrapper .hamburger-btn-close {
+    display: none;
+  }
+  #mobile-nav .nav-wrapper .hamburger-btn-close svg {
+    fill: var(--softBlack);
+  }
+  #mobile-nav .nav-wrapper .hamburger-btn-close.active {
+    display: block;
+  }
+  #mobile-nav .nav-wrapper .logo {
+    width: 50px;
+    height: auto;
+    display: flex;
+    gap: 10px;
+  }
+  #mobile-nav .nav-wrapper .logo img {
+    width: 100%;
+    height: 100%;
+  }
+  .dividers {
+    gap: 10px;
+  }
+  .big__tile {
+    margin-bottom: 10px !important;
+    padding: 10px;
+  }
+  .small__tile {
+    margin-bottom: 10px;
+    padding: 0 15px;
+  }
+  .reg__tile {
+    width: 100%;
+    padding: 10px;
+  }
+  .tile__heading {
+    line-height: 1;
+  }
+  .tile__subheading {
+    padding-top: 5px;
+  }
+  #section-home .mug__adventure {
+    padding: 35vh 10px 10px 10px;
+  }
+  #section-home .mug__adventure p {
+    width: 100%;
+  }
+  #section-beginners-corner .divider__BC1, #section-beginners-corner .divider__BC2 {
+    width: 50%;
+  }
+  #section-beginners-corner .divider__BC2 span {
+    visibility: hidden;
+  }
+  #section-beginners-corner .tipps .tipps__hero {
+    height: 200px;
+  }
+  #section-beginners-corner .tipps__collection {
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+  }
+  #section-beginners-corner .tipps__collection .tipps__collection_card {
+    padding: 10px;
+    width: 100%;
+  }
+  #section-beginners-corner .tipps__collection .tipps__collection_card .tipps__content {
+    margin-top: 10px;
+    padding: 0;
+  }
+  #section-beginners-corner .tipps__collection .tipps__collection_card .img__wrapper {
+    width: 100%;
+    height: auto;
+  }
+  #section-beginners-corner .tipps__collection .tipps__collection_card .img__wrapper img {
+    border-radius: 10px;
+    -o-object-fit: contain;
+       object-fit: contain;
+    height: 150px;
+  }
+  #section-beginners-corner .glossar .glossar__list .glossar__item {
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 50px;
+  }
+  #section-beginners-corner .glossar .glossar__list .glossar__item .img__wrapper {
+    width: auto;
+    height: 25vh;
+    padding-right: 0;
+  }
+  #section-beginners-corner .glossar .glossar__list .glossar__item .img__wrapper img {
+    -o-object-fit: contain !important;
+       object-fit: contain !important;
+  }
+  #section-beginners-corner .glossar .glossar__list .glossar__item ul {
+    padding-left: 0;
+  }
+  #section-erfahrene-geniesser .divider__EG1 {
+    width: 100%;
+  }
+  #section-erfahrene-geniesser .divider__EG2 {
+    width: 0%;
+    display: none;
+  }
+  #section-erfahrene-geniesser .expertentipps__list {
+    gap: 10px;
+    display: flex;
+    width: 100%;
+    overflow-x: scroll;
+    flex-wrap: nowrap;
+  }
+  #section-erfahrene-geniesser .expertentipps__list .expertentipps__card {
+    width: 80%;
+    flex-shrink: 0;
+  }
+  #section-erfahrene-geniesser .expertentipps__list .expertentipps__card .content .text {
+    height: 30vh;
+    padding: 10px 10px 10vh 10px;
+  }
+  #section-erfahrene-geniesser .expertentipps__list .expertentipps__card .content .preview__heading {
+    padding: 0 10px;
+    text-align: center;
+  }
+  #section-erfahrene-geniesser .expertentipps__list .expertentipps__card .heading {
+    padding: 20px 0;
+  }
+  #section-welt-des-kaffees .divider__WDK1 {
+    width: 100%;
+  }
+  #section-welt-des-kaffees .divider__WDK2 {
+    width: 0%;
+    display: none;
+  }
+  #section-welt-des-kaffees .weltkarte {
+    padding: 10px;
+    border: 1px solid var(--softBlack);
+  }
+  #section-welt-des-kaffees .weltkarte_wrapper {
+    padding-bottom: 205px;
+  }
+  #section-welt-des-kaffees .weltkarte_wrapper .one {
+    top: 18%;
+    left: 20%;
+  }
+  #section-welt-des-kaffees .weltkarte_wrapper .two {
+    top: 24%;
+    left: 25%;
+  }
+  #section-welt-des-kaffees .weltkarte_wrapper .three {
+    top: 16%;
+    left: 49%;
+  }
+  #section-welt-des-kaffees .weltkarte_wrapper .four {
+    top: 13%;
+    left: 71%;
+  }
+  #section-welt-des-kaffees .weltkarte_wrapper .five {
+    left: 75%;
+    top: 19%;
+  }
+  #section-welt-des-kaffees .weltkarte_wrapper .description {
+    width: 100%;
+    height: 195px;
+    padding: 10px;
+  }
+  #section-welt-des-kaffees .weltkarte_wrapper .description.kolumbien, #section-welt-des-kaffees .weltkarte_wrapper .description.brasilien, #section-welt-des-kaffees .weltkarte_wrapper .description.kenia, #section-welt-des-kaffees .weltkarte_wrapper .description.vietnam, #section-welt-des-kaffees .weltkarte_wrapper .description.indonesien {
+    top: 45%;
+    left: 0%;
+  }
+  #section-welt-des-kaffees .steps {
+    display: none;
+    max-height: none;
+    opacity: 0;
+  }
+  #section-welt-des-kaffees .steps_mobile {
+    opacity: 1;
+    display: flex;
+    height: auto;
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    border: 1px solid var(--softBlack);
+  }
+  #section-welt-des-kaffees .steps_mobile .wrapper {
+    position: relative;
+    width: 100%;
+  }
+  #section-welt-des-kaffees .steps_mobile .wrapper .description {
+    background-color: var(--weltColor);
+    color: var(--mainBG);
+    position: absolute;
+    width: 82.5vw;
+    height: 34vw;
+    z-index: 10;
+    padding: 10px;
+    border-radius: 10px;
+  }
+  #section-welt-des-kaffees .steps_mobile .wrapper .description .heading {
+    font-size: var(--regFontSize);
+    font-weight: 700;
+    text-align: center;
+  }
+  #section-welt-des-kaffees .steps_mobile .wrapper .description .text {
+    font-size: clamp(0.55rem, 0.5vw, 1.2rem);
+  }
+  #section-welt-des-kaffees .steps_mobile .wrapper .anbau {
+    top: 1%;
+    left: 4%;
+  }
+  #section-welt-des-kaffees .steps_mobile .wrapper .aufbereitung {
+    left: 4%;
+    top: 15.625%;
+  }
+  #section-welt-des-kaffees .steps_mobile .wrapper .weiterverarbeitung {
+    left: 4%;
+    top: 30.25%;
+  }
+  #section-welt-des-kaffees .steps_mobile .wrapper .export {
+    left: 4%;
+    top: 44.875%;
+  }
+  #section-welt-des-kaffees .steps_mobile .wrapper .roestung {
+    left: 4%;
+    top: 59.5%;
+  }
+  #section-welt-des-kaffees .steps_mobile .wrapper .mahlung {
+    left: 4%;
+    top: 74.25%;
+  }
+  #section-welt-des-kaffees .steps_mobile .wrapper .genuss {
+    left: 4%;
+    top: 88.875%;
+  }
+  #section-shop .divider__shop1 {
+    width: 30%;
+  }
+  #section-shop .empfehlungen {
+    flex-direction: column;
+    gap: 10px;
+  }
+  #section-shop .empfehlungen .reg__tile {
+    height: auto;
+  }
+  #section-shop .empfehlungen .reg__tile .empfehlungen__content {
+    height: auto;
+  }
+  #section-shop .empfehlungen .reg__tile .empfehlungen__content .item {
+    height: 300px;
+  }
+  #section-shop .empfehlungen .reg__tile .empfehlungen__content .item img {
+    width: 75%;
+    padding: 20px;
+  }
+  #section-shop .empfehlungen .reg__tile .empfehlungen__content .description {
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    opacity: 1;
+  }
+  #section-shop .shop .shop__card {
+    padding: 10px;
+    width: 100%;
+    height: 650px;
+  }
+  #section-shop .shop .shop__card .card__content {
+    flex-direction: column;
+  }
+  #section-shop .shop .shop__card .card__content .coffee__info {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  #section-shop .shop .shop__card .card__content .coffee__info .header {
+    font-size: clamp(2rem, 2.5vw, 3rem);
+  }
+  #section-shop .shop .shop__card .card__content .coffee__info .ingredients {
+    margin-bottom: 10px;
+  }
+  #section-shop .shop .shop__card .card__content .coffee__info .vertraeglichkeit {
+    margin-bottom: 10px;
+  }
+  #section-shop .shop .shop__card .card__content .price {
+    width: 100%;
+    height: 0;
+    display: none;
+  }
+  #section-shop .shop .shop__card .card__content .cart {
+    width: 100%;
+  }
+  #section-shop .shop .shop__card .card__content .cart .cart__btn {
+    border-radius: 10px;
+  }
+  #section-shop .shop .shop__card .card__content .next_item__btn {
+    top: 34%;
+    right: 15%;
+  }
+  #section-shop .shop .shop__card .card__content .prev_item__btn {
+    top: 35%;
+    left: 15%;
+  }
+  #section-shop .shop .shop__card .card__content .prev__btn {
+    left: 5px;
+  }
+  #section-shop .shop .shop__card .card__content .next__btn {
+    right: 5px;
+  }
+  #section-shop .shop .shop__card .card__content .item__display {
+    height: 65%;
+  }
+  #section-shop .shop .shop__card .card__content .item__display img {
+    width: 50vw;
+  }
+  #section-kundenservice .faq {
+    padding: 10px;
+  }
+  #section-kundenservice .faq .faq__item {
+    padding: 0;
+  }
+  #section-kundenservice .faq .faq__item .faq__answer {
+    padding-right: 10%;
+  }
+  #section-kundenservice .faq .faq__item .faq__answer.active {
+    max-height: 140px;
+  }
+}/*# sourceMappingURL=styles.css.map */
