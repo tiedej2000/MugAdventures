@@ -314,6 +314,7 @@
             display: flex;
             height: auto;
             max-height: fit-content;
+            border: 1px solid var(--softBlack);
 
             .wrapper{
                 position: relative;
@@ -385,6 +386,111 @@
 
         .empfehlungen{
             flex-direction: column;
+            gap: 10px;
+
+            .reg__tile{
+                height: auto;
+
+                .empfehlungen__content{
+                    height: auto;
+                    .item{
+                        height: 200px;
+
+                        img{
+                            width: 50%;
+                        }
+                    }
+
+                    .description{
+                        max-height: fit-content;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+
+        .shop{
+            .shop__card{
+                padding: 10px;
+                width: 100%;
+
+                .card__content{
+                    flex-direction: column;
+
+                    .coffee__info{
+                        width: 100%;
+                        margin-bottom: 10px;
+
+                        .header{
+                            font-size: clamp(2rem, 2.5vw, 3rem);
+                        }
+
+                        .ingredients{
+                            margin-bottom: 10px;
+                        }
+
+                        .vertraeglichkeit{
+                            margin-bottom: 10px;
+                        }
+                    }
+
+                    .price{
+                        width: 100%;
+                        height: 0;
+                        display: none;
+
+                    }
+
+                    .cart{
+                        width: 100%;
+
+                        .cart__btn{
+                            border-radius: 10px;
+                        }
+                    }
+
+                    .next_item__btn{
+                        top: 34%;
+                        right: 15%;
+                    }
+
+                    .prev_item__btn{
+                        top: 35%;
+                        left: 15%;
+                    }
+
+                    .prev__btn{
+                        left: 5px;
+                    }
+
+                    .next__btn{
+                        right: 5px;
+                    }
+
+                    .item__display{
+                        height: 65%;
+
+                        img{
+                            width: 55vw;
+                        } 
+                    }
+                }
+            }
+
+        }
+    }
+
+    #section-kundenservice{
+        .faq{
+            padding: 10px;
+
+            .faq__item{
+                padding: 0;
+
+                .faq__answer{
+                    padding-right: 10%;
+                }
+            }
         }
     }
 }

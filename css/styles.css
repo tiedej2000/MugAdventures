@@ -273,8 +273,7 @@ nav #card-support {
      object-fit: cover;
   width: 100%;
   height: 100%;
-  -webkit-clip-path: inset(10px 10px);
-          clip-path: inset(10px 10px);
+  clip-path: inset(10px 10px);
 }
 #section-home .divider__MA {
   background-color: var(--homeColor);
@@ -1082,7 +1081,7 @@ nav #card-support {
   width: 100%;
 }
 #section-kundenservice .faq .faq__item .heading {
-  font-size: clamp(1rem, 2vw, 3rem);
+  font-size: var(--headingFontSize);
   font-weight: 700;
 }
 #section-kundenservice .faq .faq__item .faq__question {
@@ -1105,6 +1104,7 @@ nav #card-support {
   transition: all 0.3s ease;
   padding-right: 30%;
   margin-bottom: 20px;
+  font-size: var(--regFontSize);
 }
 #section-kundenservice .faq .faq__item .faq__answer.active {
   opacity: 1;

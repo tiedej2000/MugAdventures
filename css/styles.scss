@@ -1281,7 +1281,7 @@ nav{
             width: 100%;
 
             .heading{
-                font-size: clamp(1rem, 2vw, 3rem);
+                font-size: var(--headingFontSize);
                 font-weight: 700;
             }
 
@@ -1307,6 +1307,7 @@ nav{
                 transition: all 0.3s ease;
                 padding-right: 30%;
                 margin-bottom: 20px;
+                font-size: var(--regFontSize);
 
                 &.active{
                     opacity: 1;

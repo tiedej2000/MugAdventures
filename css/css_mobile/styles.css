@@ -240,6 +240,7 @@
     height: auto;
     max-height: -moz-fit-content;
     max-height: fit-content;
+    border: 1px solid var(--softBlack);
   }
   #section-welt-des-kaffees .steps_mobile .wrapper {
     position: relative;
@@ -296,5 +297,83 @@
   }
   #section-shop .empfehlungen {
     flex-direction: column;
+    gap: 10px;
+  }
+  #section-shop .empfehlungen .reg__tile {
+    height: auto;
+  }
+  #section-shop .empfehlungen .reg__tile .empfehlungen__content {
+    height: auto;
+  }
+  #section-shop .empfehlungen .reg__tile .empfehlungen__content .item {
+    height: 200px;
+  }
+  #section-shop .empfehlungen .reg__tile .empfehlungen__content .item img {
+    width: 50%;
+  }
+  #section-shop .empfehlungen .reg__tile .empfehlungen__content .description {
+    max-height: -moz-fit-content;
+    max-height: fit-content;
+    opacity: 1;
+  }
+  #section-shop .shop .shop__card {
+    padding: 10px;
+    width: 100%;
+  }
+  #section-shop .shop .shop__card .card__content {
+    flex-direction: column;
+  }
+  #section-shop .shop .shop__card .card__content .coffee__info {
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  #section-shop .shop .shop__card .card__content .coffee__info .header {
+    font-size: clamp(2rem, 2.5vw, 3rem);
+  }
+  #section-shop .shop .shop__card .card__content .coffee__info .ingredients {
+    margin-bottom: 10px;
+  }
+  #section-shop .shop .shop__card .card__content .coffee__info .vertraeglichkeit {
+    margin-bottom: 10px;
+  }
+  #section-shop .shop .shop__card .card__content .price {
+    width: 100%;
+    height: 0;
+    display: none;
+  }
+  #section-shop .shop .shop__card .card__content .cart {
+    width: 100%;
+  }
+  #section-shop .shop .shop__card .card__content .cart .cart__btn {
+    border-radius: 10px;
+  }
+  #section-shop .shop .shop__card .card__content .next_item__btn {
+    top: 34%;
+    right: 15%;
+  }
+  #section-shop .shop .shop__card .card__content .prev_item__btn {
+    top: 35%;
+    left: 15%;
+  }
+  #section-shop .shop .shop__card .card__content .prev__btn {
+    left: 5px;
+  }
+  #section-shop .shop .shop__card .card__content .next__btn {
+    right: 5px;
+  }
+  #section-shop .shop .shop__card .card__content .item__display {
+    height: 65%;
+  }
+  #section-shop .shop .shop__card .card__content .item__display img {
+    width: 55vw;
+  }
+  #section-kundenservice .faq {
+    padding: 10px;
+  }
+  #section-kundenservice .faq .faq__item {
+    padding: 0;
+  }
+  #section-kundenservice .faq .faq__item .faq__answer {
+    padding-right: 10%;
   }
 }/*# sourceMappingURL=styles.css.map */
