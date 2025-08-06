@@ -324,7 +324,7 @@ navLinks.forEach(link =>{
 // loader animation
 
 const riveInstance = new rive.Rive({
-  src: '../media/mocca_coffee_pot (500x500).riv',
+  src: './media/mocca_coffee_pot (500x500).riv',
   canvas: document.getElementById('rive-canvas'),
   autoplay: true,
   stateMachines: "State Machine 1",
