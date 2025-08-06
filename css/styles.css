@@ -533,6 +533,7 @@ nav #card-support {
   flex-wrap: wrap;
   padding: 0;
   gap: 20px;
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
 #section-erfahrene-geniesser .expertentipps__list .expertentipps__card {
   color: var(--mainBG);
